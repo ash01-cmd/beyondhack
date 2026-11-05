@@ -15,7 +15,7 @@ a{color:var(--pr)}svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;color:var(--ink);text-decoration:none;line-height:1.2}.logo svg{width:32px;height:32px;color:var(--pr)}.logo .s{font-size:12px;font-weight:400}
 nav{display:flex;gap:6px;flex:1}nav a{padding:10px 12px;min-height:44px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;border-bottom:3px solid transparent;line-height:1.3}nav a:hover{border-color:var(--pr)}nav a .s{font-weight:400;font-size:12px}
 .tg{display:flex;background:var(--sk);border-radius:99px;padding:3px}.tg button{border:0;background:0;min-height:44px;padding:0 16px;border-radius:99px;font:600 15px inherit;font-family:inherit;cursor:pointer;color:var(--mut)}.tg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--ln)}
-.lk{background:0;border:0;color:var(--pr);font:600 14px inherit;font-family:inherit;cursor:pointer;min-height:44px;text-decoration:underline;text-align:left}
+.btn .s{color:inherit;opacity:.85}.lk{background:0;border:0;color:var(--pr);font:600 14px inherit;font-family:inherit;cursor:pointer;min-height:44px;text-decoration:underline;text-align:left}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:8px;border:1.5px solid var(--pr);background:#fff;color:var(--pr);font:600 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none;white-space:nowrap}
 .btn.pri{background:var(--pr);color:#fff}.btn.pri:hover{background:var(--prh)}.btn.urg{background:var(--ur);border-color:var(--ur);color:#fff;min-height:48px}.btn.urg:hover{background:var(--urh)}.btn.o{border-color:var(--ln);color:var(--ink);min-height:48px}.btn.o:hover{border-color:var(--ls)}
 .hero{display:grid;grid-template-columns:7fr 5fr;gap:48px;padding-top:64px;padding-bottom:64px;align-items:start}
@@ -109,6 +109,8 @@ pn:['Demonstration data: names, phone numbers and dates are placeholders.','ச�
 h1t:['1. Search by exact need','1. தேவையைத் தேடுங்கள்'],h1d:['Find places that have the specific machine or specialist, not just a general listing.','குறிப்பிட்ட இயந்திரம் அல்லது நிபுணர் உள்ள இடங்களைக் கண்டறியுங்கள்.'],
 h2t:['2. Check the verified date','2. சரிபார்த்த தேதி'],h2d:['Each result shows when staff last confirmed it. Older dates mean call first.','ஒவ்வொரு முடிவிலும் கடைசியாக உறுதிசெய்த தேதி இருக்கும்; பழையதெனில் முதலில் அழையுங்கள்.'],
 h3t:['3. Call or get directions','3. அழைக்கவும் அல்லது வழி பெறவும்'],h3d:['One tap to call, message on WhatsApp or open the route.','ஒரே தட்டலில் அழைக்க, வாட்ஸ்அப், வழி.']};
+const TX={d:{Chengalpattu:'செங்கல்பட்டு',Chennai:'சென்னை',Coimbatore:'கோயம்புத்தூர்',Dharmapuri:'தர்மபுரி',Kancheepuram:'காஞ்சிபுரம்',Madurai:'மதுரை',Salem:'சேலம்',Tiruchirappalli:'திருச்சிராப்பள்ளி',Tirunelveli:'திருநெல்வேலி',Tiruvallur:'திருவள்ளூர்',Vellore:'வேலூர்',Villupuram:'விழுப்புரம்'},l:{Tamil:'தமிழ்',English:'ஆங்கிலம்',Hindi:'இந்தி',Telugu:'தெலுங்கு'},a:{ramp:'சக்கர நாற்காலி சாய்தளம்',female_doctor:'பெண் மருத்துவர்',ambulance:'ஆம்புலன்ஸ்'},t:{'Govt Hospital':'அரசு மருத்துவமனை','Community Health Centre':'சமுதாய சுகாதார நிலையம்','Private Hospital':'தனியார் மருத்துவமனை','Primary Health Centre':'ஆரம்ப சுகாதார நிலையம்','Private Clinic':'தனியார் கிளினிக்','Diagnostic Centre':'நோய் கண்டறியும் மையம்','Community Clinic':'சமுதாய கிளினிக்'}};
+const tx=(g,v)=>(L=='ta'&&TX[g][v])||v;
 const b=k=>{const a=S[k],i=L=='en'?0:1;return a[i]+(a[1-i]?`<span class="s" lang="${i?'en':'ta'}">${a[1-i]}</span>`:'')},p=k=>S[k][L=='en'?0:1],sn=s=>L=='en'?s.name:s.ta;
 const nt=t=>String(t).toLowerCase().replace(/-/g,'').trim(),isT=t=>/[\u0B80-\u0BFF]/.test(t);
 const tm=(t,x)=>x&&(t==x||t.split(/\s+/).includes(x)||(isT(x)?(x.length>=2&&(t.includes(x)||(t.length>=3&&x.includes(t)))):x.length>=4&&t.includes(x)));
@@ -123,8 +125,8 @@ const li=rows.map(x=>{const s=SV.find(z=>z.id==x.s),[i,c,k]=SI[x.st];return `<li
 const pr=(PR[f.id]||[]).map(i=>`<tr><td>${i.i}</td><td>₹${i.a}–₹${i.b}</td><td>${fr(i.u).l[L=='en'?0:1]}</td></tr>`).join('');
 const all=f.sv.map(x=>{const s=SV.find(z=>z.id==x.s);return `${sn(s)} (${p(SI[x.st][2])})`}).join(', ');
 const e=document.createElement('article');e.className='card'+(compact?' compact':'');
-e.innerHTML=`<div><div class="top"><span class="bd ${ds.t}">${ic(bi)}${ds.l[L=='en'?0:1]}</span></div><h3>${f.n}</h3><div class="meta">${f.t} · ${f.a}, ${f.d}${r.km!=null?` · <b>${r.km.toFixed(1)} km</b>`:''}</div><ul>${li}</ul></div>
-<div><ul><li>${ic('t')}<span>${f.h24?p('f24'):'—'}</span></li><li>${ic('p')}<span>${f.lg.join(', ')}</span></li>${f.ac.length?`<li>${ic('k')}<span>${f.ac.map(a=>a.replace('_',' ')).join(', ')}</span></li>`:''}</ul></div>
+e.innerHTML=`<div><div class="top"><span class="bd ${ds.t}">${ic(bi)}${ds.l[L=='en'?0:1]}</span></div><h3>${f.n}</h3><div class="meta">${tx('t',f.t)} · ${f.a}, ${tx('d',f.d)}${r.km!=null?` · <b>${r.km.toFixed(1)} km</b>`:''}</div><ul>${li}</ul></div>
+<div><ul><li>${ic('t')}<span>${f.h24?p('f24'):'—'}</span></li><li>${ic('p')}<span>${f.lg.map(l=>tx('l',l)).join(', ')}</span></li>${f.ac.length?`<li>${ic('k')}<span>${f.ac.map(a=>L=='ta'?TX.a[a]||a:a.replace('_',' ')).join(', ')}</span></li>`:''}</ul></div>
 <div class="act"><a class="btn pri" href="tel:${dg(f.ph)}">${ic('c')}${b('call').replace(/<span.*?<\/span>/,'')}</a>${f.wa?`<a class="btn o" href="https://wa.me/${dg(f.wa).replace('+','')}" target="_blank" rel="noopener">${ic('w')}WhatsApp</a>`:''}<a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=${f.lat},${f.lng}" target="_blank" rel="noopener">${ic('d')}${p('dir')}</a></div>
 <details><summary>${p('more')}</summary><p style="margin:8px 0">${all}</p>${pr?`<table>${pr}</table>`:''}<p style="margin:8px 0;color:var(--mut)">${f.ph} · ${f.tr?`Listing reliability ${Math.round(f.tr)}/100`:''}</p></details>`;return e}
 function find(){const x=nt(q);let rs=F.map(f=>({f,m:[]}));
@@ -136,14 +138,14 @@ const rk={available:0,limited:1,unavailable:2},bs=r=>Math.min(...(r.m.length?r.m
 rs.forEach(r=>r.km=ref?hv(ref.lat,ref.lng,r.f.lat,r.f.lng):null);
 rs.sort((a,b)=>bs(a)-bs(b)||(ref?a.km-b.km:fd(a)-fd(b)));return rs}
 function run(go){const rs=find(),o=$('#out');o.innerHTML='';
-$('#rh').innerHTML=`${mt?sn(mt):q?`“${q}”`:p('all')} (${rs.length})`+(ref?`<span class="s">${p('gps')==rn?p('gps'):rn}</span>`:'');
+$('#rh').innerHTML=`${mt?sn(mt):q?`“${q}”`:p('all')} (${rs.length})`+(ref?`<span class="s">${p('gps')==rn?p('gps'):tx('d',rn)}</span>`:'');
 rs.slice(0,30).forEach(r=>o.append(card(r)));
 if(!rs.length)o.innerHTML=`<div class="empty"><p>${p('none')}</p>${SV.map(s=>`<button class="chip" style="display:inline-flex;margin:4px" data-s="${s.name}">${sn(s)}</button>`).join('')}</div>`;
 document.querySelectorAll('[data-s]').forEach(e=>e.onclick=()=>pick(e.dataset.s));
 document.querySelectorAll('#pop button').forEach(e=>e.setAttribute('aria-pressed',mt&&e.dataset.s==mt.name));
 if(go)$('#res').scrollIntoView()}
 function pick(n){q=n;$('#q').value=sn(SV.find(s=>s.name==n));q=n;run(1)}
-function bar(){const c=[['h24','f24'],['hide','fh'],['ramp','fr'],['fem','ff']],B=$('#bar');B.innerHTML=c.map(([k,t])=>`<button class="chip" data-f="${k}" aria-pressed="${!!fl[k]}">${ic('k')}${p(t)}</button>`).join('')+`<select class="sel" id="lg" aria-label="${p('anyl')}"><option value="">${p('anyl')}</option>${[...new Set(F.flatMap(f=>f.lg))].map(l=>`<option ${l==lg?'selected':''}>${l}</option>`).join('')}</select>`;
+function bar(){const c=[['h24','f24'],['hide','fh'],['ramp','fr'],['fem','ff']],B=$('#bar');B.innerHTML=c.map(([k,t])=>`<button class="chip" data-f="${k}" aria-pressed="${!!fl[k]}">${ic('k')}${p(t)}</button>`).join('')+`<select class="sel" id="lg" aria-label="${p('anyl')}"><option value="">${p('anyl')}</option>${[...new Set(F.flatMap(f=>f.lg))].map(l=>`<option value="${l}" ${l==lg?'selected':''}>${tx('l',l)}</option>`).join('')}</select>`;
 B.querySelectorAll('[data-f]').forEach(e=>e.onclick=()=>{fl[e.dataset.f]^=1;bar();run()});$('#lg').onchange=e=>{lg=e.target.value;run()}}
 function ex(){const d=SV.find(s=>s.name=='Dialysis'),rs=F.map(f=>({f,m:f.sv.filter(v=>v.s==d.id&&v.st!='unavailable')})).filter(r=>r.m.length).sort((a,b)=>fr(a.m[0].v).d-fr(b.m[0].v).d),a=rs[0],c=rs.find(r=>fr(r.m[0].v).t!=fr(a.m[0].v).t)||rs[1];
 $('#exm').innerHTML='';[a,c].filter(Boolean).forEach(r=>$('#exm').append(card(r,1)))}
@@ -153,7 +155,7 @@ $('#sl').innerHTML=SV.flatMap(s=>[s.name,s.ta]).map(n=>`<option value="${n}">`).
 const cnt=s=>F.filter(f=>f.sv.some(v=>v.s==s.id&&v.st!='unavailable')).length;
 $('#pop').innerHTML=SV.slice().sort((a,b)=>cnt(b)-cnt(a)).map(s=>`<button type="button" data-s="${s.name}" aria-pressed="false">${sn(s)} <small>(${cnt(s)})</small></button>`).join('');
 $('#pop').querySelectorAll('button').forEach(e=>e.onclick=()=>pick(e.dataset.s));
-const ds=$('#dist').value;$('#dist').innerHTML=`<option value="">${L=='en'?'Choose district':'மாவட்டம்'}</option>`+Object.keys(D.dc).sort().map(d=>`<option ${d==ds?'selected':''}>${d}</option>`).join('');
+const ds=$('#dist').value;$('#dist').innerHTML=`<option value="">${L=='en'?'Choose district':'மாவட்டம்'}</option>`+Object.keys(D.dc).sort().map(d=>`<option value="${d}" ${d==ds?'selected':''}>${tx('d',d)}</option>`).join('');
 const vs=F.flatMap(f=>f.sv.map(v=>v.v)).filter(Boolean).sort(),n30=F.filter(f=>f.sv.some(v=>fr(v.v).d<30)).length,dt=new Date(vs.pop()).toLocaleDateString(L=='en'?'en-IN':'ta-IN',{day:'numeric',month:'short',year:'numeric'});
 $('#pf').innerHTML=[[F.length,'st1'],[n30,'st2'],[Object.keys(D.dc).length,'st3'],[dt,'st4']].map(([n,k])=>`<div><b>${n}</b><span>${p(k)}</span></div>`).join('')+`<p>${p('pn')}</p>`;
 $('#hw').innerHTML=[1,2,3].map(i=>`<div><b class="n">${i}</b><h3>${p('h'+i+'t').slice(3)}</h3><p>${p('h'+i+'d')}</p></div>`).join('');
