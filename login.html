@@ -29,6 +29,7 @@
   label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
   input,select{width:100%;height:46px;padding:0 12px;border:1.5px solid var(--line-strong);border-radius:8px;background:#fff;font:inherit;font-size:16px;color:var(--ink)}
   input:focus,select:focus,button:focus-visible{outline:3px solid #0B5D5655;border-color:var(--primary)}
+  [hidden]{display:none!important}
   .up-only{display:none}
   .is-up .up-only{display:block}
   .msg{display:none;margin-top:16px;padding:12px 14px;border-radius:8px;font-size:14px}
@@ -54,13 +55,20 @@
     <button type="button" data-lang="en" aria-pressed="true">English</button>
     <button type="button" data-lang="ta" aria-pressed="false">தமிழ்</button>
   </div>
-</header>f
+</header>
 
 <main>
   <div class="card">
     <h1 id="h"></h1>
     <p class="sub" id="sub"></p>
 
+    <div id="back" hidden>
+      <p class="sub"><span data-k="signedAs"></span> <b id="backEmail"></b></p>
+      <button class="go" id="backGo" type="button" data-k="cont"></button>
+      <button class="guest" id="backOut" type="button" style="margin-top:10px" data-k="switch"></button>
+    </div>
+
+    <div id="auth">
     <div class="tabs" role="tablist">
       <button type="button" role="tab" id="tab-in" aria-selected="true" data-k="tabIn"></button>
       <button type="button" role="tab" id="tab-up" aria-selected="false" data-k="tabUp"></button>
@@ -88,6 +96,11 @@
       <label for="pw" data-k="password"></label>
       <input id="pw" type="password" autocomplete="current-password">
 
+      <div class="up-only">
+        <label for="pw2" data-k="confirm"></label>
+        <input id="pw2" type="password" autocomplete="new-password">
+      </div>
+
       <div id="msg" class="msg" role="alert" aria-live="polite"></div>
       <button class="go" id="go" type="submit"></button>
     </form>
@@ -95,6 +108,7 @@
     <div class="or"><span data-k="or"></span></div>
     <button class="guest" id="guest" type="button" data-k="guest"></button>
     <p class="note" data-k="guestNote"></p>
+    </div>
   </div>
 </main>
 
@@ -103,8 +117,8 @@
 // ====== 1. PASTE YOUR SUPABASE DETAILS HERE (Project Settings > API) ======
 // The anon (public) key is safe to put in a web page as long as Row Level Security is on
 // (supabase-setup.sql turns it on). Never put the service_role key here.
-const SUPABASE_URL = 'https://qrmvsmvqqrfmngaoqubf.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_cwUnrTYEjYY9fA0IORW9mg_dKVSmeQk';
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 // ==========================================================================
 
 const configured = !SUPABASE_URL.startsWith('YOUR_') && !SUPABASE_ANON_KEY.startsWith('YOUR_');
@@ -124,7 +138,12 @@ const S = {
   guestNote:['Emergency search never needs an account.','அவசரத் தேடலுக்குக் கணக்கு தேவையில்லை.'],
   reqEmail:['Enter a valid email address.','செல்லுபடியாகும் மின்னஞ்சலை உள்ளிடுங்கள்.'],
   reqPw:['Enter your password.','கடவுச்சொல்லை உள்ளிடுங்கள்.'],
-  reqPw8:['Password must be at least 8 characters.','கடவுச்சொல் குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்.'],
+  reqPw8:['Use at least 8 characters, with both letters and numbers.','குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்; எழுத்துகளும் எண்களும் சேர்த்து அமைக்கவும்.'],
+  confirm:['Confirm password','கடவுச்சொல்லை உறுதிசெய்'],
+  mismatch:['The two passwords do not match.','இரண்டு கடவுச்சொற்களும் பொருந்தவில்லை.'],
+  signedAs:['You are already signed in as','நீங்கள் ஏற்கனவே உள்நுழைந்துள்ளீர்கள்:'],
+  cont:['Continue','தொடரவும்'], switch:['Sign out and use another account','வெளியேறி வேறு கணக்கைப் பயன்படுத்து'],
+  profErr:['Your account was created, but your profile could not be saved. Please tell the site admin.','உங்கள் கணக்கு உருவாக்கப்பட்டது, ஆனால் சுயவிவரத்தைச் சேமிக்க முடியவில்லை. தள நிர்வாகியிடம் தெரிவிக்கவும்.'],
   reqName:['Enter your full name.','உங்கள் முழு பெயரை உள்ளிடுங்கள்.'],
   badPhone:['Enter a 10-digit mobile number, or leave it blank.','10 இலக்க கைபேசி எண்ணை உள்ளிடுங்கள், அல்லது காலியாக விடுங்கள்.'],
   invalid:['Email or password is incorrect.','மின்னஞ்சல் அல்லது கடவுச்சொல் தவறானது.'],
@@ -187,6 +206,13 @@ async function finish(user) {
     prof = r.data;
   } catch (e) {}
   const meta = user.user_metadata || {};
+  if (!prof) {   // account exists but has no profile row yet (e.g. created before the SQL was run): create it
+    try {
+      const row = { id: user.id, full_name: meta.full_name || '', phone: meta.phone || null, role: ['resident', 'verifier'].includes(meta.role) ? meta.role : 'resident' };
+      const r = await sb.from('profiles').upsert(row, { onConflict: 'id' });
+      if (!r.error) prof = row;
+    } catch (e) {}
+  }
   try {
     localStorage.setItem('cv-user', JSON.stringify({
       id: user.id, email: user.email,
@@ -218,7 +244,12 @@ async function doSignUp(email, pw, name, phone, role) {
   if (data.user && data.user.identities && data.user.identities.length === 0) throw { message: 'already registered' };
   if (data.session) {
     // Email confirmation is off: we are signed in, so make sure the profile row exists.
-    try { await sb.from('profiles').upsert({ id: data.user.id, full_name: name, phone: phone || null, role: role }, { onConflict: 'id' }); } catch (e) {}
+    let saveErr = null;
+    try {
+      const r = await sb.from('profiles').upsert({ id: data.user.id, full_name: name, phone: phone || null, role: role }, { onConflict: 'id' });
+      saveErr = r.error;
+    } catch (e) { saveErr = e; }
+    if (saveErr) { console.error('profiles save failed:', saveErr); mode = 'in'; $('#pw').value = ''; $('#pw2').value = ''; showMsg('profErr', 'err'); return; }
     await finish(data.user);
   } else {
     mode = 'in'; $('#pw').value = '';
@@ -238,7 +269,8 @@ $('#f').onsubmit = async e => {
   } else {
     if (!name) return showMsg('reqName', 'err');
     if (phone && phone.length !== 10) return showMsg('badPhone', 'err');
-    if (pw.length < 8) return showMsg('reqPw8', 'err');
+    if (!/^(?=.*[A-Za-z])(?=.*\d).{8,}$/.test(pw)) return showMsg('reqPw8', 'err');
+    if (pw !== $('#pw2').value) return showMsg('mismatch', 'err');
   }
   if (!sb) return showMsg('nosetup', 'err');
   busy = true; msgKey = null; render();
@@ -264,7 +296,17 @@ $('#f').onsubmit = async e => {
     }
     if (sb) {
       const { data } = await sb.auth.getSession();
-      if (data && data.session) await finish(data.session.user);
+      if (data && data.session) {
+        // Already signed in: say so, and let the person continue or switch account (no silent skip)
+        $('#backEmail').textContent = data.session.user.email || '';
+        $('#auth').hidden = true; $('#h').hidden = true; $('#sub').hidden = true; $('#back').hidden = false;
+        $('#backGo').onclick = () => finish(data.session.user);
+        $('#backOut').onclick = async () => {
+          await sb.auth.signOut();
+          try { localStorage.removeItem('cv-user'); } catch (e) {}
+          $('#back').hidden = true; $('#auth').hidden = false; $('#h').hidden = false; $('#sub').hidden = false;
+        };
+      }
     }
   } catch (e) {}
 })();
