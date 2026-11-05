@@ -1,0 +1,2310 @@
+[
+ {
+  "id": "7a12034b-ad9c-5d84-a5c3-f685d88e9c96",
+  "facility_id": "fd8d8df8-244f-586f-bef7-bba18633b8a2",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Ashok Mani",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "bb1e5885-f41f-5327-95f5-ed42922ff89e",
+  "facility_id": "d2cc9aaf-612a-5224-97c0-03c0bc37b51a",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Meena Pandiyan",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "7d2dbd55-2cb9-5549-b527-9e5da071500d",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Prakash Gopal",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "27cd2dc1-8e97-5180-9461-80a300fab4d6",
+  "facility_id": "6fdff1e1-25c7-582d-9148-13bb4e25bfca",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Ganesh Rajan",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "3a5a571f-7bc5-5794-98fd-fdecd52b84c4",
+  "facility_id": "46006843-62e8-5d33-b5ce-745169cfbc56",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Priya Thangaraj",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "e71aed23-f1ce-54bb-a336-d6e320cdcd74",
+  "facility_id": "c77d8d58-e9e9-5830-a421-02cda01c45fb",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Selvam Shankar",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "dea4b8fe-d30b-534b-ab42-aacd55df4cd8",
+  "facility_id": "c77d8d58-e9e9-5830-a421-02cda01c45fb",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Senthil Das",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "4fc9a2ab-d278-5084-b89b-e0f431e33272",
+  "facility_id": "af5b319d-f1f2-5a78-b260-e266c32177e4",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Kannan Sundaram",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "d83c366b-af2b-5438-b6a5-7e76cc412b46",
+  "facility_id": "6fdff1e1-25c7-582d-9148-13bb4e25bfca",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Arun Venkatesan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "0bdb1000-59cc-519a-9dda-bc20d41466e5",
+  "facility_id": "228ec9de-daa4-5d81-b637-7d3fdb0ec214",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Mohan Gopal",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "7204f2b3-cae4-5fa6-9296-ed9c73da7323",
+  "facility_id": "7f95f048-053e-5e64-beab-b9138b662d5e",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Naveen Subramanian",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "a120f684-2154-56af-9275-073863c89dba",
+  "facility_id": "aa595f12-5345-5576-808e-c2e343d62f12",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Arun Shankar",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "8a84c972-eb92-5969-b1d4-572e95f82bf4",
+  "facility_id": "b0ac75f3-f534-5d0c-b781-150fdcc1e4fc",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Mohan Natarajan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": null,
+  "shift_start": null,
+  "shift_end": null,
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "0383fc40-6487-5ac9-85f3-605c6d159ca2",
+  "facility_id": "1025e56b-bde3-5a12-9f8a-90c834a4fd10",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Ashok Natarajan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "8bc72412-3546-5fdb-99af-ec9bc6cbb243",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Latha Chandran",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "09c203ad-265e-55ca-b890-e839487a6103",
+  "facility_id": "46006843-62e8-5d33-b5ce-745169cfbc56",
+  "service_id": "6e05079a-3c39-4127-bea5-0ae288e87faf",
+  "name": "Dr. Ganesh Pandian",
+  "specialization": "Radiology",
+  "qualification": "DMRD",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "a3d905e9-1117-53b0-9449-f2f28bd19d13",
+  "facility_id": "af5b319d-f1f2-5a78-b260-e266c32177e4",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Iniyan Ravi",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "84326ab0-1551-5ac8-90ad-73049458f7ee",
+  "facility_id": "c5a9b7ce-5924-527f-add9-bb657cb6d7be",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Arun Selvi",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "14db9b71-24bd-588e-a30d-a6f37fee8a11",
+  "facility_id": "422adbee-9c23-5973-b88d-677a18764a21",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Deepa Pillai",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "698dfa61-b4b5-53a9-b9b3-275091a9cd3d",
+  "facility_id": "c5a9b7ce-5924-527f-add9-bb657cb6d7be",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Prakash Rajan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "2ea86459-26a3-5551-b048-974d5c111572",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "6e05079a-3c39-4127-bea5-0ae288e87faf",
+  "name": "Dr. Mohan Pillai",
+  "specialization": "Radiology",
+  "qualification": "DMRD",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "afe13943-52e3-58b5-b1c4-bd9d86c70404",
+  "facility_id": "af5b319d-f1f2-5a78-b260-e266c32177e4",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Vignesh Venkatesan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "8ef8d917-66f6-5e2b-9e44-6ac29690f664",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Murugan Mani",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "f9185c46-5b32-5e68-8a40-d1e84ab54c31",
+  "facility_id": "aa595f12-5345-5576-808e-c2e343d62f12",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Ravi Nathan",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "43ff7a0a-170c-5c68-8028-4af63231cecb",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Gokul Ravi",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "416de883-babf-58ae-b40d-17a6147b78eb",
+  "facility_id": "af5b319d-f1f2-5a78-b260-e266c32177e4",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Karthik Pandiyan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "386d0a61-9cdb-5927-917f-7d77e4b9fa56",
+  "facility_id": "6fdff1e1-25c7-582d-9148-13bb4e25bfca",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Geetha Shankar",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "dd933494-f593-5e41-9bcf-1ae2775588ca",
+  "facility_id": "d2cc9aaf-612a-5224-97c0-03c0bc37b51a",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Vignesh Iyer",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "2d392f54-792b-53c5-97b8-19797c2d4f19",
+  "facility_id": "3d2fa7ff-9a9b-5d19-bb84-abe43bfd1d64",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Senthil Shankar",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "9588782f-ec1f-5c7a-82fa-b97a851a5b5b",
+  "facility_id": "aa595f12-5345-5576-808e-c2e343d62f12",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Uma Annamalai",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "32d35056-84a4-5652-8066-519df4e08f6b",
+  "facility_id": "46006843-62e8-5d33-b5ce-745169cfbc56",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Gokul Nathan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "29a3a5da-7903-58e8-9805-214267e99012",
+  "facility_id": "fd8d8df8-244f-586f-bef7-bba18633b8a2",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Iniyan Krishnan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "f74233c2-4b06-549d-ae64-6ddfee1935dc",
+  "facility_id": "e3e84317-4572-5794-9ba1-dcc94dd9aafb",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Lakshmi Sundaram",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "dd503d4d-1093-5832-af58-4f1c44129d6a",
+  "facility_id": "228ec9de-daa4-5d81-b637-7d3fdb0ec214",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Nithya Maheswari",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "894ff566-2b52-53da-96c0-d0726145613a",
+  "facility_id": "6d185910-75a5-5dd2-bcf8-86928ad95c2c",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Senthil Gopal",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "af7d3c46-2d8d-5264-b8c5-ab6c96a09f20",
+  "facility_id": "c5a9b7ce-5924-527f-add9-bb657cb6d7be",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Prakash Pandian",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "91056bcb-7f59-5b23-b7b3-bc8650ed2fae",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Ashok Nathan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "6e9f3809-0c4a-592f-a3cd-5ff354bd2068",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Suresh Nathan",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "371df7be-2255-5597-8f98-a069f399291a",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Ravi Krishnan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "cddb6919-53ed-5f28-94ab-94e89da7d8ab",
+  "facility_id": "b05c56d3-5450-5daa-b380-a174f319ab0d",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Rajesh Ravi",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "88259de3-c479-50b6-b7a8-4e1c000a7e9a",
+  "facility_id": "b0ac75f3-f534-5d0c-b781-150fdcc1e4fc",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Vinoth Thangaraj",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": null,
+  "shift_start": null,
+  "shift_end": null,
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "1c23662e-735d-5488-b1e5-f50e5a9159ed",
+  "facility_id": "46006843-62e8-5d33-b5ce-745169cfbc56",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Ashok Venkatesan",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "13358dfd-c5e2-5f38-9a12-a26f83c2f671",
+  "facility_id": "8345b791-955f-53b3-873f-337b0c2ac0b2",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Gokul Annamalai",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "d6d46a5d-9b5e-5871-ab05-2f8f4f5ec2af",
+  "facility_id": "46006843-62e8-5d33-b5ce-745169cfbc56",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Suresh Shankar",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "c47c67ef-1a32-58a3-8622-b575544e87a2",
+  "facility_id": "7f95f048-053e-5e64-beab-b9138b662d5e",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Selvam Gopal",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "46d9c9ff-73ec-514a-83a2-211728d13ad6",
+  "facility_id": "10383731-f4e7-530d-aa5a-333bf4e5dc7f",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Divya Pandian",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "Telugu"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "b187ee0f-ea26-5384-8fa8-c0507cd38889",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "6e05079a-3c39-4127-bea5-0ae288e87faf",
+  "name": "Dr. Murugan Ravi",
+  "specialization": "Radiology",
+  "qualification": "DMRD",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "dcac2798-6f40-50b9-a240-4beb59c28ae2",
+  "facility_id": "422adbee-9c23-5973-b88d-677a18764a21",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Surya Gopal",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "5c27cc70-55c1-5b83-bb4b-11e466dc0c69",
+  "facility_id": "0a05ca63-f36c-517c-b33b-94c853775113",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Rajesh Pillai",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "84db2d1b-d6ab-5c17-8064-9f6520cfa30a",
+  "facility_id": "e57ca64f-62cb-5afd-bf02-9fd9fc283bdf",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Kavitha Gopal",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "45b97a8c-d9f2-5997-bb7e-e410acacf144",
+  "facility_id": "10383731-f4e7-530d-aa5a-333bf4e5dc7f",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Karthik Pillai",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "Telugu"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "05284977-347d-5af7-8a1c-111c24a658b5",
+  "facility_id": "228ec9de-daa4-5d81-b637-7d3fdb0ec214",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Senthil Krishnan",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "ead81ccb-22e9-5840-b8a0-635fa2a8d868",
+  "facility_id": "8345b791-955f-53b3-873f-337b0c2ac0b2",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Iniyan Natarajan",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "cef23eb8-5cf4-512d-8cdb-3fd2a632ae72",
+  "facility_id": "6fdff1e1-25c7-582d-9148-13bb4e25bfca",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Saravanan Krishnan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "c2387916-1da9-580b-ab38-8079bc9dbb1a",
+  "facility_id": "c5a9b7ce-5924-527f-add9-bb657cb6d7be",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Ashok Murthy",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "ca7c60b6-7a74-5a02-a89f-a182f98d497a",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Murugan Annamalai",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "e388d449-299b-5b8e-a283-65c5e65ca1b7",
+  "facility_id": "fd8d8df8-244f-586f-bef7-bba18633b8a2",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Balaji Rajan",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "8c3b2f1e-45de-5d1d-ab29-8e7cd8466262",
+  "facility_id": "3d2fa7ff-9a9b-5d19-bb84-abe43bfd1d64",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Sangeetha Rajan",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "e4489405-aceb-526a-9232-b07c3d53a1fa",
+  "facility_id": "3ab531a3-b5cc-50c8-9af2-143eb356d70d",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Ganesh Pandiyan",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "0c8aa41d-eb94-51a7-a681-a11af906ed51",
+  "facility_id": "b0ac75f3-f534-5d0c-b781-150fdcc1e4fc",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Surya Shankar",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": null,
+  "shift_start": null,
+  "shift_end": null,
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "62e7b9b3-c719-554f-bb96-1b6a7b53cf4f",
+  "facility_id": "e57ca64f-62cb-5afd-bf02-9fd9fc283bdf",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Prakash Pandiyan",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English",
+   "Hindi"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "8dbb9e1a-2d8a-56f5-bd12-b79750689812",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Iniyan Chandran",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "09ede581-4457-591e-8f6a-9815d70a0aa8",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Iniyan Iyer",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "ecd21da0-974d-5f89-8810-07e16517f67e",
+  "facility_id": "64aca87e-e7c1-595b-b8b9-92aac74c9118",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Ravi Gopal",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "5d0d7487-e4ff-5999-ac4e-9c12ff34ce0a",
+  "facility_id": "d2cc9aaf-612a-5224-97c0-03c0bc37b51a",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Ramesh Babu",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "f5629fbd-506f-5108-a63d-1a3cf7ebe017",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Harish Venkatesan",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "6b63c9bb-2e7f-5c3a-bd0c-25386dcba46d",
+  "facility_id": "679a210a-94d4-52cd-9f31-5c48b9f09584",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Karthik Mani",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": null,
+  "shift_start": null,
+  "shift_end": null,
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "7fb9975e-6493-5f50-9a26-3a72c6128823",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Anitha Annamalai",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "05c1e254-0e9e-5a8a-bee6-42dee58ac057",
+  "facility_id": "b225c57f-b266-54f9-bd5b-f56f7d1ecd26",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Suresh Thangaraj",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "ce9c58c5-3d6f-5411-a2ad-30db675875ce",
+  "facility_id": "cddef08c-2e43-5f2b-8cc2-f884c8715d96",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Kannan Subramanian",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "af96319f-214f-5dc0-963d-26eea4f13538",
+  "facility_id": "b05c56d3-5450-5daa-b380-a174f319ab0d",
+  "service_id": "6e05079a-3c39-4127-bea5-0ae288e87faf",
+  "name": "Dr. Senthil Iyer",
+  "specialization": "Radiology",
+  "qualification": "DMRD",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "2b38780c-f6fe-5181-8cd8-9b84c58a2371",
+  "facility_id": "7f95f048-053e-5e64-beab-b9138b662d5e",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Murugan Subramanian",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "26a6c796-5ab8-561a-9b45-1fb5d6387be4",
+  "facility_id": "1025e56b-bde3-5a12-9f8a-90c834a4fd10",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Geetha Babu",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "fcb8b9d3-9c63-51eb-af78-c03f7384c26e",
+  "facility_id": "3a7c5a3b-cf6d-59b8-94ae-4453cd71e9a3",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Prakash Shankar",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "eea117c6-c94d-5c11-ad6c-06723eec6485",
+  "facility_id": "7f95f048-053e-5e64-beab-b9138b662d5e",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Meena Thangaraj",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "b4413cf2-ad5c-5a6e-bab0-cb65e0d556a0",
+  "facility_id": "aa595f12-5345-5576-808e-c2e343d62f12",
+  "service_id": "c1e1663b-2730-4510-a71a-201c8c756373",
+  "name": "Dr. Selvam Mani",
+  "specialization": "Orthopaedics",
+  "qualification": "MS (Orthopaedics)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   1,
+   4
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "b96f5da4-0ba1-59c2-ad24-47c0fe6a2a1c",
+  "facility_id": "e57ca64f-62cb-5afd-bf02-9fd9fc283bdf",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Rajesh Shankar",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "f1975a48-8ff3-50a2-9c87-617e5fcf661e",
+  "facility_id": "c77d8d58-e9e9-5830-a421-02cda01c45fb",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Sangeetha Annamalai",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "7e0475fe-b031-5d4d-a6f7-5d2eb66f7fe3",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Saravanan Mani",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "c7b185b0-681a-55d6-be10-122e84ec3d24",
+  "facility_id": "e57ca64f-62cb-5afd-bf02-9fd9fc283bdf",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Dinesh Chandran",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English",
+   "Hindi"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "d0f635a4-90ef-5b32-8752-9970726a47ba",
+  "facility_id": "af5b319d-f1f2-5a78-b260-e266c32177e4",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Suresh Pandian",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "bc3a71a8-7d0b-57ae-8057-6949dc460e98",
+  "facility_id": "b0ac75f3-f534-5d0c-b781-150fdcc1e4fc",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Sangeetha Babu",
+  "specialization": "Obstetrics & Gynaecology",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": null,
+  "shift_start": null,
+  "shift_end": null,
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "15e6e784-8ae1-5942-babe-a7e7eeaf6fef",
+  "facility_id": "cec96a5b-a54f-5b57-a058-bc395f8c54f4",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Suresh Babu",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "06ad2443-ea7f-5ee8-ab76-79ec25ab4382",
+  "facility_id": "557c7b97-236d-5f80-a91e-508be3cc3c98",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Vignesh Annamalai",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "d3f2be0a-3a80-5011-b633-87a550d411fc",
+  "facility_id": "8345b791-955f-53b3-873f-337b0c2ac0b2",
+  "service_id": "20bee163-3532-4a70-bbd9-570986a19a97",
+  "name": "Dr. Dinesh Annamalai",
+  "specialization": "Nephrology",
+  "qualification": "MD, DM (Nephrology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "71563b40-1e4d-5715-b8cd-307af5a84b22",
+  "facility_id": "1025e56b-bde3-5a12-9f8a-90c834a4fd10",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Mohan Rajan",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "09:00",
+  "shift_end": "17:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ },
+ {
+  "id": "d8522443-d2c9-56e6-b62a-204a62bece48",
+  "facility_id": "cec96a5b-a54f-5b57-a058-bc395f8c54f4",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Ravi Selvi",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "6d2637e1-4b63-504b-8523-d2f299a7ca09",
+  "facility_id": "b05c56d3-5450-5daa-b380-a174f319ab0d",
+  "service_id": "e052e8a1-eae9-4daa-a8d3-0711fa40743c",
+  "name": "Dr. Surya Babu",
+  "specialization": "Pathology",
+  "qualification": "MD (Pathology)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Senior Resident"
+ },
+ {
+  "id": "21cca69b-748e-53d0-98e6-d9a3e4e7fd72",
+  "facility_id": "6d185910-75a5-5dd2-bcf8-86928ad95c2c",
+  "service_id": "6505c345-03c6-4ba2-bf96-6f8dcfc9c4f5",
+  "name": "Dr. Meena Subramanian",
+  "specialization": "Gynaecology & Obstetrics",
+  "qualification": "MS (Obstetrics & Gynaecology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil"
+  ],
+  "weekdays": [
+   0,
+   2,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "20:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "8229a783-67b2-5904-8ef3-fd5332ee5890",
+  "facility_id": "0a05ca63-f36c-517c-b33b-94c853775113",
+  "service_id": "392550b2-ed8f-44e4-8fba-c6ca765095b0",
+  "name": "Dr. Saravanan Murthy",
+  "specialization": "Radiology",
+  "qualification": "MD (Radiology)",
+  "experience_years": 18,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "shift_start": "08:00",
+  "shift_end": "14:00",
+  "on_call": false,
+  "is_synthetic": true,
+  "role": "Medical Officer"
+ },
+ {
+  "id": "d2b904b7-8807-594c-b279-9526d8c51473",
+  "facility_id": "10383731-f4e7-530d-aa5a-333bf4e5dc7f",
+  "service_id": "70dddb46-4dbd-4af8-a67e-37c2d84ecf30",
+  "name": "Dr. Arun Mani",
+  "specialization": "Emergency Medicine",
+  "qualification": "MD (Emergency Medicine)",
+  "experience_years": 4,
+  "languages": [
+   "Tamil",
+   "Telugu"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Consultant"
+ },
+ {
+  "id": "f54be2ec-3b1a-55c9-8b92-6f4bb375fb20",
+  "facility_id": "7f95f048-053e-5e64-beab-b9138b662d5e",
+  "service_id": "20b86320-f22a-441b-af7d-49353ce707ef",
+  "name": "Dr. Ravi Maheswari",
+  "specialization": "Radiology (sonography)",
+  "qualification": "MD (Radiology)",
+  "experience_years": 11,
+  "languages": [
+   "Tamil",
+   "English"
+  ],
+  "weekdays": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "shift_start": "00:00",
+  "shift_end": "23:59",
+  "on_call": true,
+  "is_synthetic": true,
+  "role": "Senior Consultant"
+ }
+]
