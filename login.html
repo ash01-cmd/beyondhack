@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Care Verified</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F7F5F0;--surface:#fff;--ink:#16201F;--muted:#4B5755;--primary:#0B5D56;--primary-hover:#084540;--tint:#E3F1EF;--line:#D8D3C7;--line-strong:#A9A394;--err-bg:#FDEBD3;--err:#92400E;--ok-bg:#E7F6EE;--ok:#046C4E}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased}
+  html[lang=ta] body{font-family:'Noto Sans Tamil','IBM Plex Sans',sans-serif;line-height:1.6}
+  body{min-height:100vh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:var(--surface);border-bottom:1px solid var(--line)}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+  .logo svg{width:30px;height:30px}
+  .lang{display:flex;background:#EFECE4;border-radius:999px;padding:3px}
+  .lang button{border:0;background:transparent;padding:7px 16px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;color:var(--muted)}
+  .lang button[aria-pressed=true]{background:var(--surface);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 16px}
+  .card{width:100%;max-width:460px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px}
+  h1{margin:0 0 6px;font-size:26px;line-height:1.25}
+  .sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+  .tabs{display:flex;border-bottom:1px solid var(--line);margin-bottom:20px}
+  .tabs button{flex:1;padding:12px 8px;border:0;border-bottom:3px solid transparent;background:none;font:inherit;font-size:15px;font-weight:500;color:var(--muted);cursor:pointer}
+  .tabs button[aria-selected=true]{color:var(--primary);border-bottom-color:var(--primary);font-weight:600}
+  label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+  input,select{width:100%;height:46px;padding:0 12px;border:1.5px solid var(--line-strong);border-radius:8px;background:#fff;font:inherit;font-size:16px;color:var(--ink)}
+  input:focus,select:focus,button:focus-visible{outline:3px solid #0B5D5655;border-color:var(--primary)}
+  .up-only{display:none}
+  .is-up .up-only{display:block}
+  .msg{display:none;margin-top:16px;padding:12px 14px;border-radius:8px;font-size:14px}
+  .msg.err{display:block;background:var(--err-bg);color:var(--err);border:1px solid #E7B884}
+  .msg.ok{display:block;background:var(--ok-bg);color:var(--ok);border:1px solid #9ED8BC}
+  .go{width:100%;height:48px;margin-top:20px;border:0;border-radius:8px;background:var(--primary);color:#fff;font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+  .go:hover{background:var(--primary-hover)}
+  .go:disabled{opacity:.65;cursor:wait}
+  .or{display:flex;align-items:center;gap:12px;margin:20px 0 14px;color:var(--muted);font-size:13px}
+  .or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+  .guest{width:100%;height:46px;border:1.5px solid var(--line-strong);border-radius:8px;background:#fff;font:inherit;font-size:15px;font-weight:500;color:var(--primary);cursor:pointer}
+  .guest:hover{background:var(--tint)}
+  .note{margin:10px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#0B5D56" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.6 11.6-11 14C9.6 26.600 5 22 5 15V7z"/><path d="M16 10v10M11 15h10" stroke-linecap="round"/></svg>
+    <span id="brand">Care Verified</span>
+  </div>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ta" aria-pressed="false">தமிழ்</button>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <h1 id="h"></h1>
+    <p class="sub" id="sub"></p>
+
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-in" aria-selected="true" data-k="tabIn"></button>
+      <button type="button" role="tab" id="tab-up" aria-selected="false" data-k="tabUp"></button>
+    </div>
+
+    <form id="f" novalidate>
+      <div class="up-only">
+        <label for="name" data-k="name"></label>
+        <input id="name" autocomplete="name">
+      </div>
+
+      <label for="email" data-k="email"></label>
+      <input id="email" type="email" autocomplete="email" inputmode="email">
+
+      <div class="up-only">
+        <label for="phone" data-k="phone"></label>
+        <input id="phone" type="tel" autocomplete="tel" inputmode="numeric" maxlength="14">
+        <label for="role" data-k="role"></label>
+        <select id="role">
+          <option value="resident" data-k="r_res"></option>
+          <option value="verifier" data-k="r_ver"></option>
+        </select>
+      </div>
+
+      <label for="pw" data-k="password"></label>
+      <input id="pw" type="password" autocomplete="current-password">
+
+      <div id="msg" class="msg" role="alert" aria-live="polite"></div>
+      <button class="go" id="go" type="submit"></button>
+    </form>
+
+    <div class="or"><span data-k="or"></span></div>
+    <button class="guest" id="guest" type="button" data-k="guest"></button>
+    <p class="note" data-k="guestNote"></p>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.js"></script>
+<script>
+// ====== 1. PASTE YOUR SUPABASE DETAILS HERE (Project Settings > API) ======
+// The anon (public) key is safe to put in a web page as long as Row Level Security is on
+// (supabase-setup.sql turns it on). Never put the service_role key here.
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+// ==========================================================================
+
+const configured = !SUPABASE_URL.startsWith('YOUR_') && !SUPABASE_ANON_KEY.startsWith('YOUR_');
+const sb = configured && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+const S = {
+  hIn:['Welcome back','மீண்டும் வருக'],
+  hUp:['Create your account','உங்கள் கணக்கை உருவாக்குங்கள்'],
+  subIn:['Sign in to find verified care near you.','உங்கள் அருகிலுள்ள சரிபார்க்கப்பட்ட சிகிச்சையைக் கண்டறிய உள்நுழையுங்கள்.'],
+  subUp:['It takes less than a minute.','ஒரு நிமிடத்துக்கும் குறைவான நேரமே ஆகும்.'],
+  tabIn:['Sign in','உள்நுழை'], tabUp:['Create account','புதிய கணக்கு'],
+  name:['Full name','முழு பெயர்'], email:['Email','மின்னஞ்சல்'], password:['Password','கடவுச்சொல்'],
+  phone:['Mobile number (optional)','கைபேசி எண் (விருப்பம்)'], role:['I am a','நான் ஒரு'],
+  r_res:['Resident','பொதுமக்கள்'], r_ver:['Field verifier','களச் சரிபார்ப்பாளர்'],
+  btnIn:['Sign in','உள்நுழை'], btnUp:['Create account','கணக்கை உருவாக்கு'], busy:['Please wait…','காத்திருக்கவும்…'],
+  or:['or','அல்லது'], guest:['Continue without signing in','உள்நுழையாமல் தொடரவும்'],
+  guestNote:['Emergency search never needs an account.','அவசரத் தேடலுக்குக் கணக்கு தேவையில்லை.'],
+  reqEmail:['Enter a valid email address.','செல்லுபடியாகும் மின்னஞ்சலை உள்ளிடுங்கள்.'],
+  reqPw:['Enter your password.','கடவுச்சொல்லை உள்ளிடுங்கள்.'],
+  reqPw8:['Password must be at least 8 characters.','கடவுச்சொல் குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்.'],
+  reqName:['Enter your full name.','உங்கள் முழு பெயரை உள்ளிடுங்கள்.'],
+  badPhone:['Enter a 10-digit mobile number, or leave it blank.','10 இலக்க கைபேசி எண்ணை உள்ளிடுங்கள், அல்லது காலியாக விடுங்கள்.'],
+  invalid:['Email or password is incorrect.','மின்னஞ்சல் அல்லது கடவுச்சொல் தவறானது.'],
+  exists:['An account with this email already exists. Please sign in.','இந்த மின்னஞ்சலில் ஏற்கனவே கணக்கு உள்ளது. உள்நுழையுங்கள்.'],
+  unconfirmed:['Please confirm your email first. Check your inbox.','முதலில் உங்கள் மின்னஞ்சலை உறுதிசெய்யுங்கள். உங்கள் இன்பாக்ஸைப் பாருங்கள்.'],
+  rate:['Too many attempts. Please wait a minute and try again.','பல முறை முயற்சித்துவிட்டீர்கள். ஒரு நிமிடம் காத்திருந்து மீண்டும் முயலுங்கள்.'],
+  generic:['Something went wrong. Please try again.','ஏதோ தவறு நேர்ந்துவிட்டது. மீண்டும் முயலுங்கள்.'],
+  confirmSent:['Account created. Check your email to confirm it, then sign in.','கணக்கு உருவாக்கப்பட்டது. உங்கள் மின்னஞ்சலில் உறுதிசெய்து, பின்னர் உள்நுழையுங்கள்.'],
+  nosetup:['Sign-in is not connected yet. Add the Supabase URL and key in login.html.','உள்நுழைவு இன்னும் இணைக்கப்படவில்லை. login.html இல் Supabase URL மற்றும் key சேர்க்கவும்.']
+};
+
+const $ = s => document.querySelector(s);
+let L = (() => { try { return localStorage.getItem('lang') === 'ta' ? 'ta' : 'en'; } catch (e) { return 'en'; } })();
+let mode = 'in', busy = false, msgKey = null, msgType = '';
+const t = k => S[k][L === 'en' ? 0 : 1];
+
+function render() {
+  document.documentElement.lang = L;
+  try { localStorage.setItem('lang', L); } catch (e) {}
+  document.title = L === 'en' ? 'Care Verified' : 'கேர் வெரிஃபைட்';
+  $('#brand').textContent = document.title;
+  document.querySelectorAll('[data-k]').forEach(e => e.textContent = t(e.dataset.k));
+  document.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === L));
+  $('#h').textContent = t(mode === 'in' ? 'hIn' : 'hUp');
+  $('#sub').textContent = t(mode === 'in' ? 'subIn' : 'subUp');
+  $('#f').classList.toggle('is-up', mode === 'up');
+  $('#tab-in').setAttribute('aria-selected', mode === 'in');
+  $('#tab-up').setAttribute('aria-selected', mode === 'up');
+  $('#pw').autocomplete = mode === 'in' ? 'current-password' : 'new-password';
+  $('#go').textContent = t(busy ? 'busy' : (mode === 'in' ? 'btnIn' : 'btnUp'));
+  $('#go').disabled = busy;
+  const m = $('#msg');
+  m.className = 'msg' + (msgKey ? ' ' + msgType : '');
+  m.textContent = msgKey ? t(msgKey) : '';
+}
+function showMsg(key, type) { msgKey = key; msgType = type || ''; render(); return false; }
+
+document.querySelectorAll('[data-lang]').forEach(b => b.onclick = () => { L = b.dataset.lang; render(); });
+$('#tab-in').onclick = () => { mode = 'in'; msgKey = null; render(); };
+$('#tab-up').onclick = () => { mode = 'up'; msgKey = null; render(); };
+$('#guest').onclick = () => {
+  try { sessionStorage.setItem('cv-guest', '1'); } catch (e) {}
+  location.href = 'index.html';
+};
+
+function mapErr(err) {
+  const m = ((err && err.message) || '').toLowerCase();
+  if (m.includes('invalid login')) return 'invalid';
+  if (m.includes('already registered') || m.includes('already been registered')) return 'exists';
+  if (m.includes('not confirmed')) return 'unconfirmed';
+  if (m.includes('rate limit') || m.includes('too many')) return 'rate';
+  return 'generic';
+}
+
+// Save who signed in (read by index.html), then go to the home page.
+async function finish(user) {
+  let prof = null;
+  try {
+    const r = await sb.from('profiles').select('full_name, role').eq('id', user.id).maybeSingle();
+    prof = r.data;
+  } catch (e) {}
+  const meta = user.user_metadata || {};
+  try {
+    localStorage.setItem('cv-user', JSON.stringify({
+      id: user.id, email: user.email,
+      name: (prof && prof.full_name) || meta.full_name || '',
+      role: (prof && prof.role) || 'resident',
+      at: Date.now()
+    }));
+    sessionStorage.removeItem('cv-guest');
+  } catch (e) {}
+  location.replace('index.html');
+}
+
+async function doSignIn(email, pw) {
+  const { data, error } = await sb.auth.signInWithPassword({ email, password: pw });
+  if (error) throw error;
+  await finish(data.user);
+}
+
+async function doSignUp(email, pw, name, phone, role) {
+  const { data, error } = await sb.auth.signUp({
+    email, password: pw,
+    options: {
+      data: { full_name: name, phone: phone, role: role },          // a database trigger copies this into "profiles"
+      emailRedirectTo: new URL('login.html', location.href).href
+    }
+  });
+  if (error) throw error;
+  // Supabase returns a user with no identities when the email is already registered
+  if (data.user && data.user.identities && data.user.identities.length === 0) throw { message: 'already registered' };
+  if (data.session) {
+    // Email confirmation is off: we are signed in, so make sure the profile row exists.
+    try { await sb.from('profiles').upsert({ id: data.user.id, full_name: name, phone: phone || null, role: role }, { onConflict: 'id' }); } catch (e) {}
+    await finish(data.user);
+  } else {
+    mode = 'in'; $('#pw').value = '';
+    showMsg('confirmSent', 'ok');
+  }
+}
+
+$('#f').onsubmit = async e => {
+  e.preventDefault();
+  if (busy) return;
+  const email = $('#email').value.trim(), pw = $('#pw').value;
+  const name = $('#name').value.trim();
+  const phone = $('#phone').value.replace(/\D/g, '').replace(/^91(?=\d{10}$)/, '');
+  if (!/^\S+@\S+\.\S+$/.test(email)) return showMsg('reqEmail', 'err');
+  if (mode === 'in') {
+    if (!pw) return showMsg('reqPw', 'err');
+  } else {
+    if (!name) return showMsg('reqName', 'err');
+    if (phone && phone.length !== 10) return showMsg('badPhone', 'err');
+    if (pw.length < 8) return showMsg('reqPw8', 'err');
+  }
+  if (!sb) return showMsg('nosetup', 'err');
+  busy = true; msgKey = null; render();
+  try {
+    if (mode === 'in') await doSignIn(email, pw);
+    else await doSignUp(email, pw, name, phone, $('#role').value);
+  } catch (err) {
+    showMsg(mapErr(err), 'err');
+  }
+  busy = false; render();
+};
+
+// Page load: handle sign-out, or skip this page if there is already a session.
+(async function start() {
+  render();
+  const params = new URLSearchParams(location.search);
+  try {
+    if (params.get('out') === '1') {
+      if (sb) await sb.auth.signOut();
+      localStorage.removeItem('cv-user'); sessionStorage.removeItem('cv-guest');
+      history.replaceState(null, '', 'login.html');
+      return;
+    }
+    if (sb) {
+      const { data } = await sb.auth.getSession();
+      if (data && data.session) await finish(data.session.user);
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
