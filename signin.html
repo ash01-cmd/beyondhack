@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Care Verified — Civic Access &amp; Authentication Portal</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Noto+Sans+Tamil:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #F7F5F0;
+        color: #16201F;
+        font-family: 'IBM Plex Sans', sans-serif;
+      }
+    }
+    .font-tamil {
+      font-family: 'Noto Sans Tamil', 'IBM Plex Sans', sans-serif;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#F7F5F0",
+            "surface": "#FFFFFF",
+            "surface-sunken": "#EFECE4",
+            "ink": "#16201F",
+            "ink-muted": "#4B5755",
+            "primary": "#0B5D56",
+            "primary-hover": "#084540",
+            "primary-tint": "#E3F1EF",
+            "urgent": "#B45309",
+            "urgent-tint": "#FDEBD3",
+            "urgent-hover": "#92400E",
+            "line": "#D8D3C7",
+            "line-strong": "#A9A394",
+            "fresh-bg": "#E7F6EE",
+            "fresh-text": "#046C4E",
+            "fresh-border": "#9ED8BC"
+          },
+          fontFamily: {
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+            tamil: ['"Noto Sans Tamil"', '"IBM Plex Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-ink antialiased min-h-screen flex flex-col justify-between">
+<!-- Persistent Civic Header (72px, Surface White, 1px Line Border) -->
+
+<!-- Main View Container -->
+<main class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 flex flex-col justify-center">
+<!-- Emergency Callout Strip (Warm Urgent-tint with Urgent Border) -->
+<aside aria-label="Emergency bypass announcement" class="w-full bg-urgent-tint border border-urgent rounded-lg p-4 sm:p-4 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-start sm:items-center gap-3.5">
+<div class="w-8 h-8 rounded-full bg-urgent/10 text-urgent flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+<div class="flex flex-col">
+<div class="text-[15px] font-bold text-ink flex flex-wrap items-baseline gap-x-2">
+<span>Need immediate medical relief or ambulance dispatch?</span>
+<span class="font-tamil text-xs font-normal text-urgent font-medium">அவசர மருத்துவ உதவி அல்லது ஆம்புலன்ஸ் தேவையா?</span>
+</div>
+<p class="text-xs sm:text-sm text-ink-muted mt-0.5">
+            Emergency services, antivenom tracking, and oxygen availability require zero login credentials.
+          </p>
+</div>
+</div>
+<button class="inline-flex items-center justify-center gap-2 h-10 px-4 bg-urgent text-white hover:bg-urgent-hover rounded font-semibold text-sm shrink-0 transition-colors shadow-xs focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-urgent" onclick="bypassLoginDirect()">
+<span>Bypass Login / அவசர தேடல்</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</aside>
+<!-- Two-Column Desktop Authentication Card -->
+<div class="w-full max-w-[840px] mx-auto bg-surface border border-line rounded-xl shadow-xs overflow-hidden"><div class="border-b border-line bg-surface-sunken/40 px-6 pt-6 pb-0"><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5"><div><div class="flex items-center gap-2 mb-1"><span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary-tint text-primary text-[11px] font-semibold uppercase tracking-wider"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>Civic Access Portal</span><span class="text-xs text-ink-muted hidden sm:inline">• Tamil Nadu Public Health Registry</span></div><h1 class="text-2xl font-bold text-ink leading-tight flex items-baseline gap-2"><span>Sign in to Care Verified</span><span class="font-tamil text-sm font-normal text-ink-muted">/ உள்நுழைவு</span></h1></div><div class="text-xs text-ink-muted flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-fresh-text"></span><span>Direct SSL Encrypted</span></div></div><div aria-label="Authentication Mode Selector" class="flex gap-2 overflow-x-auto border-b border-line/60 -mb-[1px]" role="tablist"><button aria-selected="true" class="px-4 py-3 font-semibold text-sm border-b-2 border-primary text-primary flex items-center gap-2 whitespace-nowrap focus:outline-none" id="tab-resident" onclick="switchPortalTab('resident')" role="tab"><span class="material-symbols-outlined text-[18px]">person</span><span>Resident &amp; Public</span><span class="font-tamil text-xs font-normal text-ink-muted">/ பொதுமக்கள்</span></button><button aria-selected="false" class="px-4 py-3 font-medium text-sm border-b-2 border-transparent text-ink-muted hover:text-ink flex items-center gap-2 whitespace-nowrap focus:outline-none" id="tab-verifier" onclick="switchPortalTab('verifier')" role="tab"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Field Verifier</span><span class="font-tamil text-xs font-normal text-ink-muted">/ தன்னார்வலர்</span></button><button aria-selected="false" class="px-4 py-3 font-medium text-sm border-b-2 border-transparent text-ink-muted hover:text-ink flex items-center gap-2 whitespace-nowrap focus:outline-none" id="tab-admin" onclick="switchPortalTab('admin')" role="tab"><span class="material-symbols-outlined text-[18px]">shield</span><span>Admin &amp; Staff</span><span class="font-tamil text-xs font-normal text-ink-muted">/ நிர்வாகம்</span></button><button aria-selected="false" class="px-4 py-3 font-medium text-sm border-b-2 border-transparent text-ink-muted hover:text-ink flex items-center gap-2 whitespace-nowrap focus:outline-none" id="tab-benefits" onclick="switchPortalTab('benefits')" role="tab"><span class="material-symbols-outlined text-[18px]">help_outline</span><span>Why Sign In?</span><span class="font-tamil text-xs font-normal text-ink-muted">/ நன்மைகள்</span></button></div></div><div class="p-6 sm:p-10"><div class="space-y-6" id="panel-resident"><div class="flex items-center justify-between pb-1 border-b border-line/40"><div class="flex items-center gap-6"><label class="inline-flex items-center gap-2 cursor-pointer select-none text-sm font-semibold text-ink"><input checked="" class="w-4 h-4 text-primary focus:ring-primary border-line-strong" name="res-mode" onchange="toggleResMode('otp')" type="radio" value="otp"/><span>Fast Mobile OTP <span class="font-tamil text-xs font-normal text-ink-muted">(உடனடி கடவுச்சொல்)</span></span></label><label class="inline-flex items-center gap-2 cursor-pointer select-none text-sm font-medium text-ink-muted hover:text-ink"><input class="w-4 h-4 text-primary focus:ring-primary border-line-strong" name="res-mode" onchange="toggleResMode('password')" type="radio" value="password"/><span>Password Login</span></label></div><span class="text-xs text-fresh-text font-medium hidden sm:inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified</span>No Aadhaar needed</span></div><form class="space-y-5" onsubmit="event.preventDefault(); residentSignIn();"><div><div class="flex justify-between items-baseline mb-1.5"><label class="text-sm font-semibold text-ink" for="resident-phone">Mobile Phone Number <span class="font-tamil text-xs font-normal text-ink-muted">/ கைபேசி எண்</span></label><span class="text-xs text-ink-muted">10-digit number</span></div><div class="relative flex items-center"><span class="absolute left-3.5 text-sm font-semibold text-ink-muted border-r border-line pr-2.5 pointer-events-none">+91</span><input class="w-full h-12 pl-16 pr-4 bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-ink-muted/50 transition-colors" id="resident-phone" inputmode="numeric" placeholder="98765 43210" required="" type="tel"/></div></div><div id="resident-otp-box"><div class="flex justify-between items-baseline mb-1.5"><label class="text-sm font-semibold text-ink" for="resident-otp">One-Time Passcode (OTP) <span class="font-tamil text-xs font-normal text-ink-muted">/ கடவுச்சொல்</span></label><button class="text-xs font-semibold text-primary hover:underline focus:outline-none" onclick="triggerToastNotice('6-digit security code dispatched via WhatsApp &amp; SMS.')" type="button">Resend OTP via WhatsApp / SMS</button></div><input class="w-full h-12 px-4 bg-surface text-ink text-base tracking-widest rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary placeholder:tracking-normal placeholder:text-ink-muted/50 transition-colors" id="resident-otp" maxlength="6" placeholder="Enter 6-digit passcode" type="text"/></div><div class="hidden" id="resident-password-box"><div class="flex justify-between items-baseline mb-1.5"><label class="text-sm font-semibold text-ink" for="resident-password">Account Password</label><a class="text-xs font-semibold text-primary hover:underline" href="#forgot" onclick="event.preventDefault(); triggerToastNotice('Password recovery link sent to your registered mobile.');">Forgot password?</a></div><input class="w-full h-12 px-4 bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-ink-muted/50 transition-colors" id="resident-password" placeholder="••••••••••••" type="password"/></div><div class="pt-2 space-y-3"><button class="w-full h-12 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-base flex items-center justify-center gap-2 shadow-xs transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit"><span class="material-symbols-outlined text-[20px]">lock_open</span><span>Authenticate Securely / பாதுகாப்பாக உள்நுழைக</span></button><div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-1"><button class="w-full sm:w-auto text-xs text-ink-muted hover:text-urgent font-medium flex items-center justify-center gap-1.5 py-1.5 px-2 rounded focus:outline-none transition-colors" onclick="bypassLoginDirect()" type="button"><span class="material-symbols-outlined text-[16px] text-urgent">arrow_forward</span><span>Continue as Guest (No login required) / விருந்தினராக தொடரவும்</span></button><button class="text-xs text-primary hover:underline font-medium flex items-center gap-1" onclick="switchPortalTab('benefits')" type="button"><span class="material-symbols-outlined text-[15px]">info</span><span>Why create an account? / நன்மைகள்</span></button></div></div></form></div><div class="hidden space-y-6" id="panel-verifier"><div class="p-3.5 bg-fresh-bg border border-fresh-border rounded-lg flex items-start gap-3"><span class="material-symbols-outlined text-fresh-text text-xl shrink-0 mt-0.5">verified</span><div><h4 class="text-xs font-semibold text-fresh-text">Accredited Field Auditors (VHN &amp; ASHA)</h4><p class="text-xs text-fresh-text leading-relaxed mt-0.5">Log in using your issued Health Worker ID to update clinic equipment uptime, drug inventories, and verified PHC photos.</p></div></div><form class="space-y-5" onsubmit="event.preventDefault(); verifierSignIn();"><div><label class="block text-sm font-semibold text-ink mb-1.5" for="verifier-id">Field Verifier ID (TN-VHN) <span class="font-tamil text-xs font-normal text-ink-muted">/ தன்னார்வலர் குறியீடு</span></label><input class="w-full h-12 px-4 uppercase tracking-wider bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary" id="verifier-id" required="" type="text" value="TN-VHN-8841"/></div><div><div class="flex justify-between items-baseline mb-1.5"><label class="text-sm font-semibold text-ink" for="verifier-pin">4-Digit Field Security PIN</label><span class="text-xs text-ink-muted">District Officer Issued</span></div><input class="w-full h-12 px-4 bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary" id="verifier-pin" maxlength="4" placeholder="••••" required="" type="password"/></div><div class="pt-2"><button class="w-full h-12 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-base flex items-center justify-center gap-2 shadow-xs transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Access Field Audit Dashboard / கள தணிக்கை</span></button></div></form></div><div class="hidden space-y-6" id="panel-admin"><div class="p-3.5 bg-surface-sunken border border-line rounded-lg flex items-start gap-3"><span class="material-symbols-outlined text-ink-muted text-xl shrink-0 mt-0.5">policy</span><div><h4 class="text-xs font-semibold text-ink">Authorized District Health Directorate</h4><p class="text-xs text-ink-muted leading-relaxed mt-0.5">Official access for Block Medical Officers and state disaster coordinators. Requires hardware FIDO2 token or e-Pramaan authorization.</p></div></div><form class="space-y-5" onsubmit="event.preventDefault(); adminSignIn();"><div><label class="block text-sm font-semibold text-ink mb-1.5" for="admin-email">Official Government / Directorate Email</label><input class="w-full h-12 px-4 bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary" id="admin-email" placeholder="officer@tn.gov.in" required="" type="email"/></div><div><div class="flex justify-between items-baseline mb-1.5"><label class="text-sm font-semibold text-ink" for="admin-key">e-Pramaan Passkey / 2FA Token</label><span class="text-xs text-ink-muted">FIDO2 / TOTP</span></div><input class="w-full h-12 px-4 bg-surface text-ink text-base rounded-lg border-[1.5px] border-line-strong focus:border-primary focus:ring-1 focus:ring-primary font-mono" id="admin-key" placeholder="Passcode from security key or authenticator" required="" type="password"/></div><div class="pt-2"><button class="w-full h-12 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-base flex items-center justify-center gap-2 shadow-xs transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit"><span class="material-symbols-outlined text-[20px]">vpn_key</span><span>Enter Telemetry &amp; Incident Console</span></button></div></form></div><div class="hidden space-y-6" id="panel-benefits"><div class="bg-surface-sunken/50 p-5 rounded-lg border border-line"><h3 class="text-base font-bold text-ink mb-1 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-[20px]">verified_user</span><span>Why create a citizen account?</span><span class="font-tamil text-xs font-normal text-ink-muted">/ பொதுமக்களுக்கான பலன்கள்</span></h3><p class="text-xs text-ink-muted leading-relaxed">Care Verified is an open civic registry. You can browse completely as a guest, but an account unlocks personal continuity tools:</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="p-4 rounded-lg border border-line bg-surface flex flex-col gap-2"><div class="w-8 h-8 rounded bg-primary-tint text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">bookmark</span></div><h4 class="text-sm font-semibold text-ink">Saved Taluk Bookmarks</h4><p class="text-xs text-ink-muted leading-relaxed">Keep your local Primary Health Centres (PHC) &amp; sub-centres pinned to your mobile dashboard.</p></div><div class="p-4 rounded-lg border border-line bg-surface flex flex-col gap-2"><div class="w-8 h-8 rounded bg-primary-tint text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">notifications_active</span></div><h4 class="text-sm font-semibold text-ink">Doctor Duty Alerts</h4><p class="text-xs text-ink-muted leading-relaxed">Receive alerts when pediatricians, dialysis beds, or antivenom stocks are verified on site.</p></div><div class="p-4 rounded-lg border border-line bg-surface flex flex-col gap-2"><div class="w-8 h-8 rounded bg-primary-tint text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">wifi_off</span></div><h4 class="text-sm font-semibold text-ink">Offline Phone Cache</h4><p class="text-xs text-ink-muted leading-relaxed">Saved emergency contacts and doctor schedules remain accessible even when cell towers fail.</p></div></div><div class="p-4 rounded-lg bg-fresh-bg border border-fresh-border flex items-start gap-3"><span class="material-symbols-outlined text-fresh-text text-xl shrink-0 mt-0.5">privacy_tip</span><div><h4 class="text-xs font-semibold text-fresh-text">Civic Data Guarantee</h4><p class="text-xs text-fresh-text leading-relaxed mt-0.5">256-bit encryption. Zero advertisements. No Aadhaar number required. Your health inquiries are never tracked or monetized.</p></div></div><div class="text-center pt-2"><button class="px-6 py-2.5 bg-primary text-white rounded font-semibold text-sm hover:bg-primary-hover transition-colors inline-flex items-center gap-2" onclick="switchPortalTab('resident')" type="button"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Back to Fast Resident Login</span></button></div></div><div class="hidden mt-6 p-3.5 rounded-lg bg-fresh-bg border border-fresh-border text-fresh-text text-sm flex items-center gap-2.5" id="notice-toast"><span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span><span class="font-medium" id="toast-text">Session initialized.</span></div><div class="mt-8 pt-4 border-t border-line text-xs text-ink-muted flex flex-col sm:flex-row items-center justify-between gap-2"><span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-fresh-text"></span>State Health Registry Active</span><span class="font-mono text-[11px]">Node Audit: TN-DIR-2025</span></div></div></div>
+</main>
+<!-- Civic Footer (Matching DESIGN.2.md) -->
+<footer class="border-t border-line bg-surface py-6 px-6 md:px-12 mt-12 text-sm text-ink-muted">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<!-- Left side: Offline statement & Privacy assurance -->
+<div class="flex items-center gap-2 text-xs sm:text-sm text-ink">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Works offline once opened. Your location stays on this device.</span>
+</div>
+<!-- Center & Right side: Helpline numbers and Accessibility compliance -->
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-urgent text-[16px]">call</span>
+<span>Toll-Free Helplines: <strong>104</strong> (Health Advice) • <strong>108</strong> (Ambulance)</span>
+</div>
+<span class="text-line-strong hidden sm:inline">•</span>
+<a class="hover:underline text-ink" href="#accessibility">WCAG AAA Certified</a>
+<span class="text-line-strong hidden sm:inline">•</span>
+<a class="hover:underline text-ink font-tamil" href="#tamil-guide">தமிழ் வழிகாட்டல்</a>
+<span class="text-line-strong hidden sm:inline">•</span>
+<span>© 2025 Care Verified Civic Trust</span>
+</div>
+</div>
+</footer>
+<!-- Interactivity Scripts -->
+<script>
+    // ---- already signed in? go straight home ----
+    (function () {
+      try { if (localStorage.getItem('cv-user')) window.location.replace('index.html'); } catch (e) {}
+    })();
+
+    // ---- tabs: Resident / Field Verifier / Admin / Why Sign In ----
+    function switchPortalTab(id) {
+      ['resident', 'verifier', 'admin', 'benefits'].forEach(function (t) {
+        var panel = document.getElementById('panel-' + t);
+        var tab = document.getElementById('tab-' + t);
+        var on = (t === id);
+        if (panel) panel.classList.toggle('hidden', !on);
+        if (tab) {
+          tab.setAttribute('aria-selected', on ? 'true' : 'false');
+          ['border-primary', 'text-primary', 'font-semibold'].forEach(function (c) { tab.classList.toggle(c, on); });
+          ['border-transparent', 'text-ink-muted', 'font-medium'].forEach(function (c) { tab.classList.toggle(c, !on); });
+        }
+      });
+    }
+
+    // ---- resident: OTP <-> password ----
+    function toggleResMode(mode) {
+      document.getElementById('resident-otp-box').classList.toggle('hidden', mode !== 'otp');
+      document.getElementById('resident-password-box').classList.toggle('hidden', mode !== 'password');
+    }
+
+    function bypassLoginDirect() {
+      triggerToastNotice('Guest Access Granted: Browsing active clinic directory with direct hotline dialers enabled.');
+      setTimeout(function () { window.location.href = 'index.html'; }, 1200);
+    }
+
+    var toastTimer;
+    function triggerToastNotice(msg) {
+      var toast = document.getElementById('notice-toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.add('hidden'); }, 5000);
+    }
+
+    // ---- demo sign-in: remembers who signed in (this browser only), then goes home ----
+    // No real server check - any valid-looking input is accepted.
+    function completeSignIn(role, id) {
+      try { localStorage.setItem('cv-user', JSON.stringify({ role: role, id: id, at: Date.now() })); } catch (e) {}
+      triggerToastNotice('Signed in successfully. Taking you to the home page…');
+      setTimeout(function () { window.location.href = 'index.html'; }, 900);
+    }
+
+    function residentSignIn() {
+      var phone = document.getElementById('resident-phone').value.replace(/\D/g, '');
+      var usingOtp = !document.getElementById('resident-otp-box').classList.contains('hidden');
+      if (phone.length !== 10) { triggerToastNotice('Enter a valid 10-digit mobile number.'); return; }
+      if (usingOtp) {
+        if (!document.getElementById('resident-otp').value.trim()) { triggerToastNotice('Enter the OTP sent to your phone.'); return; }
+      } else if (!document.getElementById('resident-password').value) {
+        triggerToastNotice('Enter your password.'); return;
+      }
+      completeSignIn('resident', phone);
+    }
+
+    function verifierSignIn() {
+      completeSignIn('verifier', document.getElementById('verifier-id').value.trim());
+    }
+
+    function adminSignIn() {
+      completeSignIn('admin', document.getElementById('admin-email').value.trim());
+    }
+  
+</script>
+<script src="nav.js"></script><script src="i18n.js"></script></body></html>
