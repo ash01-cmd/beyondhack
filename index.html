@@ -51,6 +51,7 @@ footer{border-top:1px solid var(--ln);padding:32px 0;color:var(--mut);font-size:
 @media(max-width:1000px){.wrap,.sec{padding-inline:24px}.hero{grid-template-columns:1fr;gap:32px;padding-top:32px}h1{font-size:34px;line-height:42px}.card{grid-template-columns:1fr}.act{flex-direction:row;flex-wrap:wrap}.act .btn{flex:1}.proof .wrap,.how{grid-template-columns:1fr 1fr}nav{display:none}.hd .wrap{gap:12px}}
 @media(max-width:560px){.proof .wrap,.how{grid-template-columns:1fr}.logo .s{display:none}.hd .wrap{height:auto;min-height:64px;flex-wrap:wrap;gap:2px 8px;padding-block:6px}.logo{flex:1 1 auto;font-size:17px;min-width:0}.logo svg{width:26px;height:26px}.tg button{padding:0 12px;min-height:40px}.lk{margin-left:auto;font-size:13px;min-height:32px;text-align:right}.panel{padding:16px}.panel .fd,.panel .fd.sm{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+select,option,optgroup{background-color:var(--sf);color:var(--ink)}.in select{background-color:var(--sf)}option:disabled{color:var(--mut)}
 </style><script>
 function cvAuthed(){try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(/^sb-.+-auth-token$/.test(k)){var s=JSON.parse(localStorage.getItem(k)||'null');if(s&&s.access_token&&s.refresh_token)return true}}}catch(e){}return false}
 try{if(!cvAuthed()&&!sessionStorage.getItem('cv-guest'))location.replace('login.html')}catch(e){}
