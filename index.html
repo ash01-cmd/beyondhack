@@ -46,9 +46,10 @@ select.sel{min-height:44px;border:1px solid var(--ls);border-radius:8px;padding:
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:24px}.how b.n{font:700 46px/1 'IBM Plex Sans',sans-serif;color:var(--pr)}.how h3{font:600 20px/28px 'IBM Plex Sans',sans-serif;margin:8px 0}.how p{margin:0;color:var(--mut)}
 footer{border-top:1px solid var(--ln);padding:32px 0;color:var(--mut);font-size:14px}dialog{border:1px solid var(--ln);border-radius:12px;padding:24px;max-width:440px}dialog::backdrop{background:rgba(22,32,31,.4)}
 @media(max-width:1000px){.wrap,.sec{padding-inline:24px}.hero{grid-template-columns:1fr;gap:32px;padding-top:32px}h1{font-size:34px;line-height:42px}.card{grid-template-columns:1fr}.act{flex-direction:row;flex-wrap:wrap}.act .btn{flex:1}.proof .wrap,.how{grid-template-columns:1fr 1fr}nav{display:none}.hd .wrap{gap:12px}}
-@media(max-width:560px){.proof .wrap,.how{grid-template-columns:1fr}.logo .s{display:none}}
+@media(max-width:560px){.proof .wrap,.how{grid-template-columns:1fr}.logo .s{display:none}.hd .wrap{height:auto;min-height:64px;flex-wrap:wrap;gap:2px 8px;padding-block:6px}.logo{flex:1 1 auto;font-size:17px;min-width:0}.logo svg{width:26px;height:26px}.tg button{padding:0 12px;min-height:40px}.lk{margin-left:auto;font-size:13px;min-height:32px;text-align:right}.panel{padding:16px}.panel .fd,.panel .fd.sm{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
+</style><script>try{if(!localStorage.getItem('cv-user')&&!sessionStorage.getItem('cv-guest'))location.replace('login.html')}catch(e){}</script>
+</head><body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-s" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.350-4.350"/></symbol>
 <symbol id="i-m" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></symbol>
@@ -108,7 +109,7 @@ pn:['Demonstration data: names, phone numbers and dates are placeholders.','ச�
 h1t:['1. Search by exact need','1. தேவையைத் தேடுங்கள்'],h1d:['Find places that have the specific machine or specialist, not just a general listing.','குறிப்பிட்ட இயந்திரம் அல்லது நிபுணர் உள்ள இடங்களைக் கண்டறியுங்கள்.'],
 h2t:['2. Check the verified date','2. சரிபார்த்த தேதி'],h2d:['Each result shows when staff last confirmed it. Older dates mean call first.','ஒவ்வொரு முடிவிலும் கடைசியாக உறுதிசெய்த தேதி இருக்கும்; பழையதெனில் முதலில் அழையுங்கள்.'],
 h3t:['3. Call or get directions','3. அழைக்கவும் அல்லது வழி பெறவும்'],h3d:['One tap to call, message on WhatsApp or open the route.','ஒரே தட்டலில் அழைக்க, வாட்ஸ்அப், வழி.']};
-Object.assign(S,{so:['Sign out','வெளியேறு'],choose:['Choose a service','சேவையைத் தேர்வு செய்க'],nomatch:['Could not match that to a service. Please choose from the list.','பொருத்தமான சேவை கிடைக்கவில்லை. பட்டியலிலிருந்து தேர்வு செய்யுங்கள்.'],wa:['WhatsApp','வாட்ஸ்அப்'],km:['km','கி.மீ'],rel:['Listing reliability','பட்டியல் நம்பகத்தன்மை'],lgs:['Language','மொழி'],ttl:['Care Verified','கேர் வெரிஃபைட்'],
+Object.assign(S,{nosv:['No services listed yet','சேவைகள் இன்னும் பட்டியலிடப்படவில்லை'],so:['Sign out','வெளியேறு'],choose:['Choose a service','சேவை தேர்வு'],nomatch:['Could not match that to a service. Please choose from the list.','பொருத்தமான சேவை கிடைக்கவில்லை. பட்டியலிலிருந்து தேர்வு செய்யுங்கள்.'],wa:['WhatsApp','வாட்ஸ்அப்'],km:['km','கி.மீ'],rel:['Listing reliability','பட்டியல் நம்பகத்தன்மை'],lgs:['Language','மொழி'],ttl:['Care Verified','கேர் வெரிஃபைட்'],
 noloc:['Location is not available in this browser.','இந்த உலாவியில் இடம் கிடைக்கவில்லை.'],f24:['Open 24x7','24 மணி நேரமும் திறந்திருக்கும்'],
 a_ramp:['Wheelchair ramp','சக்கர நாற்காலி சாய்தளம்'],a_female_doctor:['Female doctor','பெண் மருத்துவர்'],a_ambulance:['Ambulance','ஆம்புலன்ஸ்']});
 const PL={'Adyar Road':'அடையாறு சாலை','Adyar':'அடையாறு','Attur':'ஆத்தூர்','Dharmapuri Town':'தர்மபுரி நகரம்','Melur':'மேலூர்','Palayamkottai':'பாளையங்கோட்டை','Tambaram':'தாம்பரம்','Tiruvallur Town':'திருவள்ளூர் நகரம்','Villupuram Town':'விழுப்புரம் நகரம்','Mettupalayam':'மேட்டுப்பாளையம்','Perambur':'பெரம்பூர்','Coimbatore Central':'கோயம்புத்தூர் மையம்','Kancheepuram Town':'காஞ்சிபுரம் நகரம்','Madurai Central':'மதுரை மையம்','Salem Town':'சேலம் நகரம்','Tirunelveli Town':'திருநெல்வேலி நகரம்','Trichy Central':'திருச்சி மையம்','Vellore Town':'வேலூர் நகரம்','Egmore':'எழும்பூர்','Harur':'அரூர்','Palacode':'பாலக்கோடு','Ponneri':'பொன்னேரி','Sriperumbudur':'ஸ்ரீபெரும்புதூர்','Maraimalai Nagar':'மறைமலை நகர்','Srirangam':'ஸ்ரீரங்கம்','Velachery':'வேளச்சேரி','Katpadi':'காட்பாடி','Pollachi':'பொள்ளாச்சி','Thirumangalam':'திருமங்கலம்','Tondiarpet':'தண்டையார்பேட்டை','Anna Nagar':'அண்ணா நகர்'};
@@ -127,28 +128,28 @@ const ic=n=>`<svg aria-hidden="true"><use href="#i-${n}"/></svg>`;
 function fr(v){if(!v)return{t:'stl',d:null,l:['Not yet verified','சரிபார்க்கப்படவில்லை']};const d=Math.max(0,Math.floor((Date.now()-new Date(v))/864e5)),t=d<30?'cur':d<=180?'mod':'stl',m=Math.round(d/30);
 return{t,d,l:t=='stl'?[`Last checked ${m} months ago`,`${m} மாதங்களுக்கு முன் சோதிக்கப்பட்டது`]:d<1?['Verified today','இன்று சரிபார்க்கப்பட்டது']:d<30?[`Verified ${d} day${d==1?'':'s'} ago`,`${d} நாட்களுக்கு முன் சரிபார்க்கப்பட்டது`]:[`Verified ${m} month${m==1?'':'s'} ago`,`${m} மாதங்களுக்கு முன் சரிபார்க்கப்பட்டது`]}}
 const hv=(a,b,c,d)=>{const r=x=>x*Math.PI/180,u=r(c-a),v=r(d-b),k=Math.sin(u/2)**2+Math.cos(r(a))*Math.cos(r(c))*Math.sin(v/2)**2;return 12742*Math.asin(Math.sqrt(k))};
-const cost=x=>x.c1==null?'':x.c1==0?p('free'):`₹${x.c0??0}–₹${x.c1}`,dg=s=>s.replace(/[^\d+]/g,'');
+const cost=x=>x.c1==null?'':x.c1==0?p('free'):`₹${x.c0??0}–₹${x.c1}`,dg=s=>String(s??'').replace(/[^\d+]/g,'');
 const SI={available:['k','ok','av'],limited:['a','lm','li'],unavailable:['x','no','un']};
-function card(r,compact){const f=r.f,rows=r.m.length?r.m:f.sv.slice(0,3),ds=rows.map(x=>fr(x.v)).sort((a,b)=>(a.d??9e9)-(b.d??9e9))[0],bi=ds.t=='cur'?'k':ds.t=='mod'?'t':'l';
+function card(r,compact){const f=r.f,rows=r.m.length?r.m:f.sv.slice(0,3),ds=rows.map(x=>fr(x.v)).sort((a,b)=>(a.d??9e9)-(b.d??9e9))[0]||fr(null),bi=ds.t=='cur'?'k':ds.t=='mod'?'t':'l';
 const li=rows.map(x=>{const s=SV.find(z=>z.id==x.s),[i,c,k]=SI[x.st];return `<li class="${c}">${ic(i)}<span><b>${sn(s)}: ${p(k)}</b><span style="color:var(--ink);font-weight:400">${[mp(TM,x.tm),mp(SP,x.sp),cost(x)].filter(Boolean).map(t=>' · '+t).join('')}</span></span></li>`}).join('');
 const pr=(PR[f.id]||[]).map(i=>`<tr><td>${mp(PI,i.i)}</td><td>₹${i.a}–₹${i.b}</td><td>${fr(i.u).l[L=='en'?0:1]}</td></tr>`).join('');
 const all=f.sv.map(x=>{const s=SV.find(z=>z.id==x.s);return `${sn(s)} (${p(SI[x.st][2])})`}).join(', ');
 const e=document.createElement('article');e.className='card'+(compact?' compact':'');
-e.innerHTML=`<div><div class="top"><span class="bd ${ds.t}">${ic(bi)}${ds.l[L=='en'?0:1]}</span></div><h3>${nm(f.n)}</h3><div class="meta">${tx('t',f.t)} · ${[ad(f.a),tx('d',f.d)].filter(Boolean).join(', ')}${r.km!=null?` · <b>${r.km.toFixed(1)} ${p('km')}</b>`:''}</div><ul>${li}</ul></div>
+e.innerHTML=`<div><div class="top"><span class="bd ${ds.t}">${ic(bi)}${ds.l[L=='en'?0:1]}</span></div><h3>${nm(f.n)}</h3><div class="meta">${tx('t',f.t)} · ${[ad(f.a),tx('d',f.d)].filter(Boolean).join(', ')}${r.km!=null?` · <b>${r.km.toFixed(1)} ${p('km')}</b>`:''}</div><ul>${li||`<li>${p('nosv')}</li>`}</ul></div>
 <div><ul><li>${ic('t')}<span>${f.h24?p('f24'):'—'}</span></li><li>${ic('p')}<span>${f.lg.map(l=>tx('l',l)).join(', ')}</span></li>${f.ac.length?`<li>${ic('k')}<span>${f.ac.map(a=>S['a_'+a]?p('a_'+a):a).join(', ')}</span></li>`:''}</ul></div>
-<div class="act"><a class="btn pri" href="tel:${dg(f.ph)}">${ic('c')}${p('call')}</a>${f.wa?`<a class="btn o" href="https://wa.me/${dg(f.wa).replace('+','')}" target="_blank" rel="noopener">${ic('w')}${p('wa')}</a>`:''}<a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=${f.lat},${f.lng}" target="_blank" rel="noopener">${ic('d')}${p('dir')}</a></div>
-<details><summary>${p('more')}</summary><p style="margin:8px 0">${all}</p>${pr?`<table>${pr}</table>`:''}<p style="margin:8px 0;color:var(--mut)">${f.ph} · ${f.tr?`${p('rel')} ${Math.round(f.tr)}/100`:''}</p></details>`;return e}
+<div class="act">${dg(f.ph)?`<a class="btn pri" href="tel:${dg(f.ph)}">${ic('c')}${p('call')}</a>`:''}${f.wa?`<a class="btn o" href="https://wa.me/${dg(f.wa).replace('+','')}" target="_blank" rel="noopener">${ic('w')}${p('wa')}</a>`:''}<a class="btn o" href="https://www.google.com/maps/dir/?api=1&destination=${f.lat},${f.lng}" target="_blank" rel="noopener">${ic('d')}${p('dir')}</a></div>
+<details><summary>${p('more')}</summary><p style="margin:8px 0">${all}</p>${pr?`<table>${pr}</table>`:''}<p style="margin:8px 0;color:var(--mut)">${[f.ph,f.tr?`${p('rel')} ${Math.round(f.tr)}/100`:''].filter(Boolean).join(' · ')}</p></details>`;return e}
 function find(){const x=nt(q);let rs=F.map(f=>({f,m:[]}));
 if(x){const ids=SV.filter(s=>s.terms.some(t=>tm(t,x))).map(s=>s.id);mt=ids.length?SV.find(s=>s.id==ids[0]):null;
 if(ids.length)rs=rs.map(r=>({f:r.f,m:r.f.sv.filter(v=>ids.includes(v.s))})).filter(r=>r.m.length);else rs=rs.filter(r=>nt([r.f.n,r.f.d,r.f.a,nm(r.f.n,'ta'),ad(r.f.a,'ta'),TX.d[r.f.d]].join(' ')).includes(x))}else mt=null;
 if(fl.hide)rs=rs.map(r=>({f:r.f,m:r.m.filter(v=>v.st!='unavailable')})).filter(r=>!x||r.m.length);
 if(fl.h24)rs=rs.filter(r=>r.f.h24);if(fl.ramp)rs=rs.filter(r=>r.f.ac.includes('ramp'));if(fl.fem)rs=rs.filter(r=>r.f.ac.includes('female_doctor'));if(lg)rs=rs.filter(r=>r.f.lg.includes(lg));
-const rk={available:0,limited:1,unavailable:2},bs=r=>Math.min(...(r.m.length?r.m:r.f.sv).map(v=>rk[v.st])),fd=r=>Math.min(...(r.m.length?r.m:r.f.sv).map(v=>fr(v.v).d??9e9));
+const rk={available:0,limited:1,unavailable:2},bs=r=>Math.min(3,...(r.m.length?r.m:r.f.sv).map(v=>rk[v.st])),fd=r=>Math.min(9e9,...(r.m.length?r.m:r.f.sv).map(v=>fr(v.v).d??9e9));
 rs.forEach(r=>r.km=ref?hv(ref.lat,ref.lng,r.f.lat,r.f.lng):null);
 rs.sort((a,b)=>bs(a)-bs(b)||(ref?a.km-b.km:fd(a)-fd(b)));return rs}
 function run(go){const rs=find(),o=$('#out');o.innerHTML='';
 $('#rh').innerHTML=`${mt?sn(mt):q?`“${q}”`:p('all')} (${rs.length})`+(ref?`<span class="s">${p('gps')==rn?p('gps'):tx('d',rn)}</span>`:'');
-rs.slice(0,30).forEach(r=>o.append(card(r)));
+rs.slice(0,30).forEach(r=>{try{o.append(card(r))}catch(e){console.error('card failed',r.f&&r.f.id,e)}});
 if(!rs.length)o.innerHTML=`<div class="empty"><p>${p('none')}</p>${SV.map(s=>`<button class="chip" style="display:inline-flex;margin:4px" data-s="${s.name}">${sn(s)}</button>`).join('')}</div>`;
 document.querySelectorAll('[data-s]').forEach(e=>e.onclick=()=>pick(e.dataset.s));
 document.querySelectorAll('#pop button').forEach(e=>e.setAttribute('aria-pressed',mt&&e.dataset.s==mt.name));
@@ -157,7 +158,7 @@ function pick(n){q=n;$('#q').value=n;run(1)}
 function bar(){const c=[['h24','f24'],['hide','fh'],['ramp','fr'],['fem','ff']],B=$('#bar');B.innerHTML=c.map(([k,t])=>`<button class="chip" data-f="${k}" aria-pressed="${!!fl[k]}">${ic('k')}${p(t)}</button>`).join('')+`<select class="sel" id="lg" aria-label="${p('anyl')}"><option value="">${p('anyl')}</option>${[...new Set(F.flatMap(f=>f.lg))].map(l=>`<option value="${l}" ${l==lg?'selected':''}>${tx('l',l)}</option>`).join('')}</select>`;
 B.querySelectorAll('[data-f]').forEach(e=>e.onclick=()=>{fl[e.dataset.f]^=1;bar();run()});$('#lg').onchange=e=>{lg=e.target.value;run()}}
 function ex(){const d=SV.find(s=>s.name=='Dialysis'),rs=F.map(f=>({f,m:f.sv.filter(v=>v.s==d.id&&v.st!='unavailable')})).filter(r=>r.m.length).sort((a,b)=>fr(a.m[0].v).d-fr(b.m[0].v).d),a=rs[0],c=rs.find(r=>fr(r.m[0].v).t!=fr(a.m[0].v).t)||rs[1];
-$('#exm').innerHTML='';[a,c].filter(Boolean).forEach(r=>$('#exm').append(card(r,1)))}
+$('#exm').innerHTML='';[a,c].filter(Boolean).forEach(r=>{try{$('#exm').append(card(r,1))}catch(e){console.error('example failed',e)}})}
 function ui(){document.documentElement.lang=L;try{localStorage.setItem('lang',L)}catch(e){}document.title=p('ttl');$('#lgn').textContent=p('ttl');document.querySelector('.tg').setAttribute('aria-label',p('lgs'));document.querySelectorAll('[data-k]').forEach(e=>e.innerHTML=b(e.dataset.k));$('#staff').textContent=cvUser()?p('so'):p('staff');
 $('#q').innerHTML=`<option value="">${p('choose')}</option>`+SV.map(s=>`<option value="${s.name}">${sn(s)}</option>`).join('');$('#q').value=SV.some(s=>s.name==q)?q:'';$('#le').setAttribute('aria-pressed',L=='en');$('#lt').setAttribute('aria-pressed',L=='ta');
 
@@ -172,12 +173,12 @@ bar();ex();run()}
 $('#q').onchange=e=>{q=e.target.value;run()};
 $('#f').onsubmit=e=>{e.preventDefault();q=$('#q').value;const s=SV.find(z=>z.ta==q);if(s)q=s.name;run(1)};
 $('#le').onclick=()=>{L='en';ui()};$('#lt').onclick=()=>{L='ta';ui()};const cvUser=()=>{try{return localStorage.getItem('cv-user')}catch(e){return null}};
-$('#staff').onclick=()=>{if(cvUser()){try{localStorage.removeItem('cv-user')}catch(e){}ui()}else location.href='signin.html'};
+$('#staff').onclick=()=>{location.href=cvUser()?'login.html?out=1':'login.html'};
 $('#dist').onchange=e=>{const c=D.dc[e.target.value];ref=c?{lat:c[0],lng:c[1]}:null;rn=e.target.value;run()};
 $('#loc').onclick=()=>{const m=$('#vs');if(!navigator.geolocation){m.textContent=p('noloc');return}m.textContent='…';
 navigator.geolocation.getCurrentPosition(g=>{ref={lat:g.coords.latitude,lng:g.coords.longitude};rn=p('gps');m.textContent='';$('#dist').value='';run(1)},()=>{m.textContent=L=='en'?'Could not get your location. Choose a district instead.':'இடத்தைப் பெற முடியவில்லை. மாவட்டத்தைத் தேர்வு செய்க.'})};
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-$('#mic').onclick=()=>{const m=$('#vs');if(!SR){m.textContent=L=='en'?'Voice search is not supported in this browser. Please type.':'இந்த உலாவியில் குரல் தேடல் இல்லை.';return}
-const r=new SR();r.lang=L=='ta'?'ta-IN':'en-IN';m.textContent=L=='en'?'Listening… speak now':'கேட்கிறது… பேசுங்கள்';r.onresult=e=>{const t=e.results[0][0].transcript,x=nt(t),s=SV.find(z=>z.ta==t||nt(z.name)==x||z.terms.some(w=>tm(w,x)));m.textContent='';if(s){q=s.name;$('#q').value=q;run(1)}else m.textContent=p('nomatch')};r.onerror=()=>{m.textContent=L=='en'?'Could not hear you. Please try again or type.':'கேட்க முடியவில்லை. மீண்டும் முயலுங்கள்.'};r.onend=()=>{if(m.textContent.startsWith('Listening')||m.textContent.startsWith('கேட்கிறது'))m.textContent=''};r.start()};
+$('#mic').onclick=()=>{const m=$('#vs');if(!SR){m.textContent=L=='en'?'Voice search is not supported in this browser. Please choose from the list.':'இந்த உலாவியில் குரல் தேடல் இல்லை. பட்டியலிலிருந்து தேர்வு செய்யுங்கள்.';return}
+const r=new SR();r.lang=L=='ta'?'ta-IN':'en-IN';m.textContent=L=='en'?'Listening… speak now':'கேட்கிறது… பேசுங்கள்';r.onresult=e=>{const t=e.results[0][0].transcript,x=nt(t),s=SV.find(z=>z.ta==t||nt(z.name)==x||z.terms.some(w=>tm(w,x)));m.textContent='';if(s){q=s.name;$('#q').value=q;run(1)}else m.textContent=p('nomatch')};r.onerror=()=>{m.textContent=L=='en'?'Could not hear you. Please try again or choose from the list.':'கேட்க முடியவில்லை. மீண்டும் முயலுங்கள்.'};r.onend=()=>{if(m.textContent.startsWith('Listening')||m.textContent.startsWith('கேட்கிறது'))m.textContent=''};r.start()};
 ui();
 </script></body></html>
