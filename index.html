@@ -73,7 +73,7 @@ footer{border-top:1px solid var(--ln);padding:32px 0;color:var(--mut);font-size:
 <section class="wrap hero" id="search"><div>
 <h1 data-k="h1"></h1><p class="lead" data-k="lead"></p>
 <form class="panel" id="f" autocomplete="off">
-<div class="fd"><label for="q" data-k="l1"></label><div class="in"><svg><use href="#i-s"/></svg><input id="q" list="sl"><datalist id="sl"></datalist><button type="button" id="mic"><svg><use href="#i-m"/></svg><span data-k="speak"></span></button></div></div>
+<div class="fd"><label for="q" data-k="l1"></label><div class="in"><svg><use href="#i-s"/></svg><select id="q"></select><button type="button" id="mic"><svg><use href="#i-m"/></svg><span data-k="speak"></span></button></div></div>
 <div class="fd sm"><label for="dist" data-k="l2"></label><div class="in"><select id="dist"></select><button type="button" id="loc"><svg><use href="#i-p"/></svg><span data-k="loc"></span></button></div></div>
 <button class="btn pri" style="min-height:48px;padding:0 28px" data-k="go"></button>
 <p class="help" style="flex-basis:100%;margin:0" data-k="priv"></p></form>
@@ -109,7 +109,7 @@ pn:['Demonstration data: names, phone numbers and dates are placeholders.','ச�
 h1t:['1. Search by exact need','1. தேவையைத் தேடுங்கள்'],h1d:['Find places that have the specific machine or specialist, not just a general listing.','குறிப்பிட்ட இயந்திரம் அல்லது நிபுணர் உள்ள இடங்களைக் கண்டறியுங்கள்.'],
 h2t:['2. Check the verified date','2. சரிபார்த்த தேதி'],h2d:['Each result shows when staff last confirmed it. Older dates mean call first.','ஒவ்வொரு முடிவிலும் கடைசியாக உறுதிசெய்த தேதி இருக்கும்; பழையதெனில் முதலில் அழையுங்கள்.'],
 h3t:['3. Call or get directions','3. அழைக்கவும் அல்லது வழி பெறவும்'],h3d:['One tap to call, message on WhatsApp or open the route.','ஒரே தட்டலில் அழைக்க, வாட்ஸ்அப், வழி.']};
-Object.assign(S,{wa:['WhatsApp','வாட்ஸ்அப்'],km:['km','கி.மீ'],rel:['Listing reliability','பட்டியல் நம்பகத்தன்மை'],lgs:['Language','மொழி'],ttl:['Care Verified','கேர் வெரிஃபைட்'],
+Object.assign(S,{choose:['Choose a service','சேவையைத் தேர்வு செய்க'],nomatch:['Could not match that to a service. Please choose from the list.','பொருத்தமான சேவை கிடைக்கவில்லை. பட்டியலிலிருந்து தேர்வு செய்யுங்கள்.'],wa:['WhatsApp','வாட்ஸ்அப்'],km:['km','கி.மீ'],rel:['Listing reliability','பட்டியல் நம்பகத்தன்மை'],lgs:['Language','மொழி'],ttl:['Care Verified','கேர் வெரிஃபைட்'],
 noloc:['Location is not available in this browser.','இந்த உலாவியில் இடம் கிடைக்கவில்லை.'],f24:['Open 24x7','24 மணி நேரமும் திறந்திருக்கும்'],
 a_ramp:['Wheelchair ramp','சக்கர நாற்காலி சாய்தளம்'],a_female_doctor:['Female doctor','பெண் மருத்துவர்'],a_ambulance:['Ambulance','ஆம்புலன்ஸ்']});
 const PL={'Adyar Road':'அடையாறு சாலை','Adyar':'அடையாறு','Attur':'ஆத்தூர்','Dharmapuri Town':'தர்மபுரி நகரம்','Melur':'மேலூர்','Palayamkottai':'பாளையங்கோட்டை','Tambaram':'தாம்பரம்','Tiruvallur Town':'திருவள்ளூர் நகரம்','Villupuram Town':'விழுப்புரம் நகரம்','Mettupalayam':'மேட்டுப்பாளையம்','Perambur':'பெரம்பூர்','Coimbatore Central':'கோயம்புத்தூர் மையம்','Kancheepuram Town':'காஞ்சிபுரம் நகரம்','Madurai Central':'மதுரை மையம்','Salem Town':'சேலம் நகரம்','Tirunelveli Town':'திருநெல்வேலி நகரம்','Trichy Central':'திருச்சி மையம்','Vellore Town':'வேலூர் நகரம்','Egmore':'எழும்பூர்','Harur':'அரூர்','Palacode':'பாலக்கோடு','Ponneri':'பொன்னேரி','Sriperumbudur':'ஸ்ரீபெரும்புதூர்','Maraimalai Nagar':'மறைமலை நகர்','Srirangam':'ஸ்ரீரங்கம்','Velachery':'வேளச்சேரி','Katpadi':'காட்பாடி','Pollachi':'பொள்ளாச்சி','Thirumangalam':'திருமங்கலம்','Tondiarpet':'தண்டையார்பேட்டை','Anna Nagar':'அண்ணா நகர்'};
@@ -154,14 +154,14 @@ if(!rs.length)o.innerHTML=`<div class="empty"><p>${p('none')}</p>${SV.map(s=>`<b
 document.querySelectorAll('[data-s]').forEach(e=>e.onclick=()=>pick(e.dataset.s));
 document.querySelectorAll('#pop button').forEach(e=>e.setAttribute('aria-pressed',mt&&e.dataset.s==mt.name));
 if(go)$('#res').scrollIntoView()}
-function pick(n){q=n;$('#q').value=sn(SV.find(s=>s.name==n));q=n;run(1)}
+function pick(n){q=n;$('#q').value=n;run(1)}
 function bar(){const c=[['h24','f24'],['hide','fh'],['ramp','fr'],['fem','ff']],B=$('#bar');B.innerHTML=c.map(([k,t])=>`<button class="chip" data-f="${k}" aria-pressed="${!!fl[k]}">${ic('k')}${p(t)}</button>`).join('')+`<select class="sel" id="lg" aria-label="${p('anyl')}"><option value="">${p('anyl')}</option>${[...new Set(F.flatMap(f=>f.lg))].map(l=>`<option value="${l}" ${l==lg?'selected':''}>${tx('l',l)}</option>`).join('')}</select>`;
 B.querySelectorAll('[data-f]').forEach(e=>e.onclick=()=>{fl[e.dataset.f]^=1;bar();run()});$('#lg').onchange=e=>{lg=e.target.value;run()}}
 function ex(){const d=SV.find(s=>s.name=='Dialysis'),rs=F.map(f=>({f,m:f.sv.filter(v=>v.s==d.id&&v.st!='unavailable')})).filter(r=>r.m.length).sort((a,b)=>fr(a.m[0].v).d-fr(b.m[0].v).d),a=rs[0],c=rs.find(r=>fr(r.m[0].v).t!=fr(a.m[0].v).t)||rs[1];
 $('#exm').innerHTML='';[a,c].filter(Boolean).forEach(r=>$('#exm').append(card(r,1)))}
-function ui(){document.documentElement.lang=L;try{localStorage.setItem('lang',L)}catch(e){}document.title=p('ttl');$('#lgn').textContent=p('ttl');document.querySelector('.tg').setAttribute('aria-label',p('lgs'));if(mt&&q==mt.name)$('#q').value=sn(mt);document.querySelectorAll('[data-k]').forEach(e=>e.innerHTML=b(e.dataset.k));
-$('#q').placeholder=L=='en'?'e.g. Dialysis, X-ray, delivery':'எ.கா. டயாலிசிஸ், எக்ஸ்-ரே';$('#le').setAttribute('aria-pressed',L=='en');$('#lt').setAttribute('aria-pressed',L=='ta');
-$('#sl').innerHTML=SV.map(s=>`<option value="${sn(s)}">`).join('');
+function ui(){document.documentElement.lang=L;try{localStorage.setItem('lang',L)}catch(e){}document.title=p('ttl');$('#lgn').textContent=p('ttl');document.querySelector('.tg').setAttribute('aria-label',p('lgs'));document.querySelectorAll('[data-k]').forEach(e=>e.innerHTML=b(e.dataset.k));
+$('#q').innerHTML=`<option value="">${p('choose')}</option>`+SV.map(s=>`<option value="${s.name}">${sn(s)}</option>`).join('');$('#q').value=SV.some(s=>s.name==q)?q:'';$('#le').setAttribute('aria-pressed',L=='en');$('#lt').setAttribute('aria-pressed',L=='ta');
+
 const cnt=s=>F.filter(f=>f.sv.some(v=>v.s==s.id&&v.st!='unavailable')).length;
 $('#pop').innerHTML=SV.slice().sort((a,b)=>cnt(b)-cnt(a)).map(s=>`<button type="button" data-s="${s.name}" aria-pressed="false">${sn(s)} <small>(${cnt(s)})</small></button>`).join('');
 $('#pop').querySelectorAll('button').forEach(e=>e.onclick=()=>pick(e.dataset.s));
@@ -170,6 +170,7 @@ const vs=F.flatMap(f=>f.sv.map(v=>v.v)).filter(Boolean).sort(),n30=F.filter(f=>f
 $('#pf').innerHTML=[[F.length,'st1'],[n30,'st2'],[Object.keys(D.dc).length,'st3'],[dt,'st4']].map(([n,k])=>`<div><b>${n}</b><span>${p(k)}</span></div>`).join('')+`<p>${p('pn')}</p>`;
 $('#hw').innerHTML=[1,2,3].map(i=>`<div><b class="n">${i}</b><h3>${p('h'+i+'t').slice(3)}</h3><p>${p('h'+i+'d')}</p></div>`).join('');
 bar();ex();run()}
+$('#q').onchange=e=>{q=e.target.value;run()};
 $('#f').onsubmit=e=>{e.preventDefault();q=$('#q').value;const s=SV.find(z=>z.ta==q);if(s)q=s.name;run(1)};
 $('#le').onclick=()=>{L='en';ui()};$('#lt').onclick=()=>{L='ta';ui()};$('#staff').onclick=()=>$('#sd').showModal();
 $('#dist').onchange=e=>{const c=D.dc[e.target.value];ref=c?{lat:c[0],lng:c[1]}:null;rn=e.target.value;run()};
@@ -177,6 +178,6 @@ $('#loc').onclick=()=>{const m=$('#vs');if(!navigator.geolocation){m.textContent
 navigator.geolocation.getCurrentPosition(g=>{ref={lat:g.coords.latitude,lng:g.coords.longitude};rn=p('gps');m.textContent='';$('#dist').value='';run(1)},()=>{m.textContent=L=='en'?'Could not get your location. Choose a district instead.':'இடத்தைப் பெற முடியவில்லை. மாவட்டத்தைத் தேர்வு செய்க.'})};
 const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
 $('#mic').onclick=()=>{const m=$('#vs');if(!SR){m.textContent=L=='en'?'Voice search is not supported in this browser. Please type.':'இந்த உலாவியில் குரல் தேடல் இல்லை.';return}
-const r=new SR();r.lang=L=='ta'?'ta-IN':'en-IN';m.textContent=L=='en'?'Listening… speak now':'கேட்கிறது… பேசுங்கள்';r.onresult=e=>{q=$('#q').value=e.results[0][0].transcript;m.textContent='';const s=SV.find(z=>z.ta==q);if(s)q=s.name;run(1)};r.onerror=()=>{m.textContent=L=='en'?'Could not hear you. Please try again or type.':'கேட்க முடியவில்லை. மீண்டும் முயலுங்கள்.'};r.onend=()=>{if(m.textContent.startsWith('Listening')||m.textContent.startsWith('கேட்கிறது'))m.textContent=''};r.start()};
+const r=new SR();r.lang=L=='ta'?'ta-IN':'en-IN';m.textContent=L=='en'?'Listening… speak now':'கேட்கிறது… பேசுங்கள்';r.onresult=e=>{const t=e.results[0][0].transcript,x=nt(t),s=SV.find(z=>z.ta==t||nt(z.name)==x||z.terms.some(w=>tm(w,x)));m.textContent='';if(s){q=s.name;$('#q').value=q;run(1)}else m.textContent=p('nomatch')};r.onerror=()=>{m.textContent=L=='en'?'Could not hear you. Please try again or type.':'கேட்க முடியவில்லை. மீண்டும் முயலுங்கள்.'};r.onend=()=>{if(m.textContent.startsWith('Listening')||m.textContent.startsWith('கேட்கிறது'))m.textContent=''};r.start()};
 ui();
 </script></body></html>
